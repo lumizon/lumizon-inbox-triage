@@ -1,0 +1,4264 @@
+{
+  "summary": {
+    "date": "2026-11-05",
+    "triage_backend": "d3",
+    "emails": 50,
+    "errors": 0,
+    "category_accuracy": 96,
+    "priority_accuracy": 82,
+    "order_match_accuracy": 100,
+    "avg_seconds_per_email": 14.6,
+    "avg_triage_seconds": 4.33,
+    "drafts": true,
+    "manual_minutes_per_email": 4,
+    "cost_usd_total": 1.244,
+    "cost_usd_per_email": 0.0249,
+    "wall_seconds": 168,
+    "headline": "50 test emails: 96% correctly tagged, 100% matched to the right order, 15 seconds per email instead of 4 minutes."
+  },
+  "matrix": {
+    "billing": {
+      "billing": 10,
+      "shipping": 0,
+      "refund": 0,
+      "bug": 0,
+      "other": 0,
+      "error": 0
+    },
+    "shipping": {
+      "billing": 0,
+      "shipping": 11,
+      "refund": 1,
+      "bug": 0,
+      "other": 0,
+      "error": 0
+    },
+    "refund": {
+      "billing": 0,
+      "shipping": 1,
+      "refund": 11,
+      "bug": 0,
+      "other": 0,
+      "error": 0
+    },
+    "bug": {
+      "billing": 0,
+      "shipping": 0,
+      "refund": 0,
+      "bug": 8,
+      "other": 0,
+      "error": 0
+    },
+    "other": {
+      "billing": 0,
+      "shipping": 0,
+      "refund": 0,
+      "bug": 0,
+      "other": 8,
+      "error": 0
+    }
+  },
+  "misses": [
+    {
+      "id": "e21",
+      "subject": "THIRD EMAIL - order 4811",
+      "expected": {
+        "category": "refund",
+        "priority": "urgent",
+        "order_id": "4811"
+      },
+      "got": {
+        "category": "shipping",
+        "priority": "urgent",
+        "order_id": "4811",
+        "match": "by_id"
+      }
+    },
+    {
+      "id": "e25",
+      "subject": "Only half my order arrived",
+      "expected": {
+        "category": "shipping",
+        "priority": "normal",
+        "order_id": "4814"
+      },
+      "got": {
+        "category": "refund",
+        "priority": "normal",
+        "order_id": "4814",
+        "match": "by_id"
+      }
+    }
+  ],
+  "tickets": [
+    {
+      "id": "e01",
+      "email": {
+        "id": "e01",
+        "from_name": "Maya Chen",
+        "from_email": "maya.chen@example.com",
+        "received_at": "2026-11-03T09:14:00Z",
+        "subject": "Refund for order #4821?",
+        "body": "Hi there,\n\nThe gooseneck kettle arrived last week and it's lovely, but it doesn't sit flat on my induction hob, it wobbles. I haven't used it since. Can I send it back for a refund?\n\nThanks,\nMaya"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 9134.750083,
+        "lookup_ms": 0.1686249999984284,
+        "draft_ms": 12330.987916999999,
+        "total_ms": 21469.177
+      },
+      "cost_usd": 0.022958,
+      "created_at": "2026-11-05T10:59:38.067Z",
+      "triage": {
+        "backend": "d3",
+        "category": "refund",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4821",
+        "confidence": 0.9872937961996698,
+        "probabilities": {
+          "billing": 0.0002639737547783026,
+          "shipping": 0.0005821429173007875,
+          "refund": 0.9872937961996698,
+          "bug": 0.0002977441812812013,
+          "other": 0.01156234294696982
+        }
+      },
+      "order": {
+        "id": "4821",
+        "customer": {
+          "name": "Maya Chen",
+          "email": "maya.chen@example.com"
+        },
+        "placed_at": "2026-10-24",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-KTL-GN",
+            "name": "Gooseneck Kettle (stovetop)",
+            "qty": 1,
+            "unit_price": 129
+          }
+        ],
+        "subtotal": 129,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "USPS",
+          "tracking": "9400111204821399829129",
+          "events": [
+            {
+              "date": "2026-10-25",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-28",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 129,
+        "payment": {
+          "method": "Visa •••• 8377",
+          "charges": [
+            {
+              "id": "ch_4821_1",
+              "amount": 129,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-24"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Maya wants to return her gooseneck kettle (order #4821) for a refund because it wobbles on her induction hob.",
+        "reply": "Hi Maya,\n\nI'm sorry the kettle wobbles on your hob. That's annoying, especially when the kettle itself is lovely. Yes, you can send it back. It was delivered on October 28, so you have until November 27 to return it.\n\nBefore I set up the return, I need to know whether the kettle itself is faulty. Could you set it on a flat surface, like a kitchen counter, and check whether it still wobbles? Please send a photo or short video that shows the base.\n\n- **If it wobbles on a flat surface too**, the base is likely warped. That's a defect, so we cover everything. We'll send you a free return label, and you can choose a replacement kettle or a full refund of $129.\n- **If it only wobbles on the induction hob**, you can return it as a standard return because it's unused. You would pay the return shipping, and we'd refund the $129 once it arrives.\n\nEither way, the refund goes back to your Visa ending 8377 within 5–10 business days after we receive the kettle. Please send it back in its original packaging.\n\nOnce I hear back from you, I'll send the return instructions.\n\nWarm regards,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "none",
+            "detail": "Waiting for Maya's photo or video. If the base is warped (defect): send a free return label and give her the choice of a replacement or a full $129 refund. If it isn't: send standard return instructions (she pays return shipping) and refund $129 to Visa ••••8377 once the kettle is received."
+          }
+        ],
+        "internal_note": "The return window is fine (delivered 2026-10-28, closes 2026-11-27). Please check whether KP-KTL-GN is advertised as induction-compatible. If it is, wobbling on induction may count as our issue, so we should cover the return shipping no matter what her photo shows.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e02",
+      "email": {
+        "id": "e02",
+        "from_name": "Jordan Reyes",
+        "from_email": "jordan.reyes@example.com",
+        "received_at": "2026-11-03T07:02:00Z",
+        "subject": "where is my order",
+        "body": "hey, ordered the electric kettle over a week ago and the tracking hasn't changed in days. is it lost??"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 2928.007708000001,
+        "lookup_ms": 0.08233299999847077,
+        "draft_ms": 10572.452458000003,
+        "total_ms": 13501.264208999997
+      },
+      "cost_usd": 0.0187742,
+      "created_at": "2026-11-05T10:59:59.537Z",
+      "triage": {
+        "backend": "d3",
+        "category": "shipping",
+        "priority": "urgent",
+        "sentiment": "frustrated",
+        "order_id": null,
+        "confidence": 0.984860760658032,
+        "probabilities": {
+          "billing": 0.00021482572671272678,
+          "shipping": 0.984860760658032,
+          "refund": 0.013173113078900772,
+          "bug": 0.0008772461186779819,
+          "other": 0.0008740544176765156
+        }
+      },
+      "order": {
+        "id": "4805",
+        "customer": {
+          "name": "Jordan Reyes",
+          "email": "jordan.reyes@example.com"
+        },
+        "placed_at": "2026-10-25",
+        "status": "shipped",
+        "items": [
+          {
+            "sku": "KP-KTL-EL",
+            "name": "Electric Gooseneck Kettle",
+            "qty": 1,
+            "unit_price": 159
+          }
+        ],
+        "subtotal": 159,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "USPS",
+          "tracking": "9400111204805398502170",
+          "events": [
+            {
+              "date": "2026-10-26",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-27",
+              "status": "In transit",
+              "location": "Reno, NV"
+            }
+          ]
+        },
+        "total": 159,
+        "payment": {
+          "method": "Visa •••• 7785",
+          "charges": [
+            {
+              "id": "ch_4805_1",
+              "amount": 159,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-25"
+            }
+          ]
+        }
+      },
+      "order_match": "by_sender",
+      "draft": {
+        "summary": "Jordan's electric kettle (order #4805) hasn't had a tracking update since Oct 27, and they want to know if it's lost.",
+        "reply": "Hi Jordan,\n\nI'm sorry about the wait. I can see why you're worried.\n\nI found your order #4805 for the Electric Gooseneck Kettle, placed on October 25. It left Portland on October 26 with USPS (tracking 9400111204805398502170). The last scan was \"In transit\" in Reno, NV on October 27, and there have been no updates since. That's 7 days without movement, so something isn't right.\n\nHere's what we're doing:\n- We're opening a trace with USPS today to try to find the parcel.\n- You don't have to wait for the trace to finish. You can choose either option now:\n  1. **Reship**: we send you a new Electric Gooseneck Kettle at no cost, or\n  2. **Refund**: a full refund of $159 to your Visa ending 7785. It usually shows up within 5–10 business days.\n\nJust reply with the option you'd like and we'll take care of it. If this isn't the order you meant, send me the order number and I'll look into that one.\n\nSorry again for the trouble.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "open_carrier_claim",
+            "detail": "Open a USPS trace for order #4805, tracking 9400111204805398502170. Last scan was In transit, Reno NV, 2026-10-27, with nothing since."
+          },
+          {
+            "type": "none",
+            "detail": "Wait for Jordan to choose. If they pick a reship, send 1x Electric Gooseneck Kettle (KP-KTL-EL) at no charge. If they pick a refund, refund $159 to Visa ••7785 (charge ch_4805_1)."
+          }
+        ],
+        "internal_note": "The order was matched from the sender's most recent order (#4805, electric kettle, placed Oct 25), and it fits the email. The parcel has been stuck for 7 days (since Oct 27), so policy allows a trace plus a reship or refund. The customer hasn't picked one yet.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e03",
+      "email": {
+        "id": "e03",
+        "from_name": "Ben Carter",
+        "from_email": "ben.carter@example.org",
+        "received_at": "2026-11-03T06:40:00Z",
+        "subject": "Charged twice for order 4812",
+        "body": "Hello,\n\nMy credit card statement shows two charges of $97 from Kettle & Pine on the same day, but I only placed one order (#4812). Please refund the duplicate as soon as possible.\n\nBen Carter"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 12451.478125000001,
+        "lookup_ms": 0.01770799999940209,
+        "draft_ms": 9499.209875,
+        "total_ms": 21951.012875
+      },
+      "cost_usd": 0.017388,
+      "created_at": "2026-11-05T10:59:59.538Z",
+      "triage": {
+        "backend": "d3",
+        "category": "billing",
+        "priority": "urgent",
+        "sentiment": "frustrated",
+        "order_id": "4812",
+        "confidence": 0.9442181462595783,
+        "probabilities": {
+          "billing": 0.9442181462595783,
+          "shipping": 0.00016394011401726046,
+          "refund": 0.049183047658748924,
+          "bug": 0.005900578029805557,
+          "other": 0.0005342879378498887
+        }
+      },
+      "order": {
+        "id": "4812",
+        "customer": {
+          "name": "Ben Carter",
+          "email": "ben.carter@example.org"
+        },
+        "placed_at": "2026-10-31",
+        "status": "shipped",
+        "items": [
+          {
+            "sku": "KP-GRD-HND",
+            "name": "Hand Grinder",
+            "qty": 1,
+            "unit_price": 79
+          },
+          {
+            "sku": "KP-BN-COL",
+            "name": "Colombia Huila Beans 250 g",
+            "qty": 1,
+            "unit_price": 18
+          }
+        ],
+        "subtotal": 97,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "USPS",
+          "tracking": "9400111204812399082715",
+          "events": [
+            {
+              "date": "2026-11-01",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            }
+          ]
+        },
+        "total": 97,
+        "payment": {
+          "method": "Visa •••• 8044",
+          "charges": [
+            {
+              "id": "ch_4812_1",
+              "amount": 97,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-31"
+            },
+            {
+              "id": "ch_4812_2",
+              "amount": 97,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-31"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Ben was charged $97 twice for order #4812 and wants the duplicate refunded.",
+        "reply": "Hi Ben,\n\nThanks for letting us know, and sorry about this. You're right: our payment system shows two $97.00 charges on your Visa ending in 8044 on October 31 for order #4812. You placed one order, so the second charge is a duplicate.\n\nWe're refunding the duplicate $97.00 to the same Visa card right away. How long it takes to show on your statement depends on your bank. The original $97.00 charge covers your order and stays as it is.\n\nYour order (Hand Grinder and Colombia Huila Beans 250 g) shipped from Portland on November 1 by USPS standard shipping. You can follow it with tracking number 9400111204812399082715.\n\nIf the refund hasn't shown up after a few business days, just reply to this email and we'll look into it.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "refund",
+            "detail": "Refund the duplicate charge ch_4812_2 ($97.00 USD, captured 2026-10-31) to Visa •••• 8044. Keep ch_4812_1 as the payment for order #4812."
+          }
+        ],
+        "internal_note": "The order data shows the duplicate: two captured $97 charges on 2026-10-31 (ch_4812_1, ch_4812_2) for one $97 order. Before refunding, check in the payment processor that ch_4812_2 hasn't already been refunded.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e04",
+      "email": {
+        "id": "e04",
+        "from_name": "Paula Méndez",
+        "from_email": "paula.mendez@example.com",
+        "received_at": "2026-11-03T05:51:00Z",
+        "subject": "Password reset email never arrives",
+        "body": "Hi, I've tried to reset my password 4 times now and the email never shows up (checked spam too). I can't log into my account to see my orders. Can you help?"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 7800.4535,
+        "lookup_ms": 0.03162499999962165,
+        "draft_ms": 8962.557290999997,
+        "total_ms": 16764.091167
+      },
+      "cost_usd": 0.0134934,
+      "created_at": "2026-11-05T10:59:59.538Z",
+      "triage": {
+        "backend": "d3",
+        "category": "bug",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": null,
+        "confidence": 0.9891779438018109,
+        "probabilities": {
+          "billing": 0.0003942781774355315,
+          "shipping": 0.0010999252570995607,
+          "refund": 0.00060303195007031,
+          "bug": 0.9891779438018109,
+          "other": 0.008724820813583662
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "Customer has requested a password reset 4 times, but the reset email never arrives (she checked spam), so she can't log in to see her orders.",
+        "reply": "Hi Paula,\n\nI'm sorry about this. Trying four times with nothing showing up is frustrating, and thank you for checking your spam folder.\n\nI couldn't find an account or orders under paula.mendez@example.com. Your account may be under a different email address, which would explain why the reset email isn't reaching you. Could you reply with:\n\n- Any other email address you might have used to sign up or place an order\n- An order number, if you have one from an old confirmation email or receipt\n\nI've also passed this on to our team so they can check whether reset emails are going out properly. Once I hear back from you, a teammate will look up your account and help you get back in. In the meantime, I'm happy to look up any order details for you here.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "fix_bug",
+            "detail": "Check whether password reset emails are being sent and delivered. The customer says 4 attempts never arrived, including in spam. Check the email delivery logs for paula.mendez@example.com and any other address she gives us."
+          }
+        ],
+        "internal_note": "No account or orders found for paula.mendez@example.com. She may be using the wrong email, which would explain the missing reset emails, or the reset feature may actually be broken. Check the email delivery logs before replying to her next message.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e05",
+      "email": {
+        "id": "e05",
+        "from_name": "Theo Lambert",
+        "from_email": "theo@ridgelinecafe.example",
+        "received_at": "2026-11-02T22:10:00Z",
+        "subject": "Wholesale pricing for our café",
+        "body": "Good evening,\n\nI run Ridgeline Café in Bend, OR. We'd love to stock your hand grinders and filters in our retail corner. Do you offer wholesale pricing, and what are the minimums?\n\nBest,\nTheo"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 16672.284666999996,
+        "lookup_ms": 0.019625000000814907,
+        "draft_ms": 8421.734749999996,
+        "total_ms": 25094.300832999998
+      },
+      "cost_usd": 0.0151594,
+      "created_at": "2026-11-05T10:59:59.539Z",
+      "triage": {
+        "backend": "d3",
+        "category": "other",
+        "priority": "low",
+        "sentiment": "neutral",
+        "order_id": null,
+        "confidence": 0.9972384316718066,
+        "probabilities": {
+          "billing": 0.0022345411889066265,
+          "shipping": 0.00018701751016658255,
+          "refund": 0.00018926533003679643,
+          "bug": 0.00015074429908341864,
+          "other": 0.9972384316718066
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "Café owner in Bend, OR is asking whether we offer wholesale pricing on hand grinders and filters, and what the minimum order is.",
+        "reply": "Hi Theo,\n\nThanks for getting in touch, and for thinking of Kettle & Pine for Ridgeline Café's retail corner. We'd be glad to see our grinders on your shelves.\n\nA teammate who handles business accounts will follow up with you about wholesale pricing and minimum orders. To help them get back to you with the right details, could you tell us:\n\n- Which hand grinders and filters you're interested in\n- Roughly how many units you'd order at first, and how often you'd expect to restock\n- Whether you'd want orders shipped to the café in Bend or picked up from our Portland workshop\n\nOne thing I can tell you now: business orders over $500 can be paid by invoice on net 30 terms once approved. Our hand grinders also come with a 2-year warranty against defects.\n\nTalk soon,\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "forward_to_owner",
+            "detail": "Wholesale inquiry from Theo Lambert, Ridgeline Café (Bend, OR), theo@ridgelinecafe.example. Wants to stock hand grinders and filters for retail and is asking about wholesale pricing and minimums. Please follow up with terms."
+          }
+        ],
+        "internal_note": "Our policy doesn't cover wholesale pricing or minimums, so the reply doesn't promise either. It only mentions net 30 invoicing for business orders over $500 (after approval). The owner or sales lead needs to reply with actual terms.",
+        "needs_attention": true
+      }
+    },
+    {
+      "id": "e06",
+      "email": {
+        "id": "e06",
+        "from_name": "Ethan Wright",
+        "from_email": "ethan.wright@example.org",
+        "received_at": "2026-11-03T08:05:00Z",
+        "subject": "URGENT wrong address on order #4830",
+        "body": "Hi, I just realised I used my old address for order 4830! I moved last week. The new address is 2218 SE Alder St, Apt 4, Portland OR 97214. Please change it before it ships!!\n\nEthan"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 20767.538459000003,
+        "lookup_ms": 0.028333999995084014,
+        "draft_ms": 7357.482249999994,
+        "total_ms": 28125.489457999996
+      },
+      "cost_usd": 0.021719199999999998,
+      "created_at": "2026-11-05T10:59:59.539Z",
+      "triage": {
+        "backend": "d3",
+        "category": "shipping",
+        "priority": "urgent",
+        "sentiment": "frustrated",
+        "order_id": "4830",
+        "confidence": 0.9900123414843364,
+        "probabilities": {
+          "billing": 0.0003078910979245034,
+          "shipping": 0.9900123414843364,
+          "refund": 0.007683233772318117,
+          "bug": 0.0010259925009788744,
+          "other": 0.000970541144442184
+        }
+      },
+      "order": {
+        "id": "4830",
+        "customer": {
+          "name": "Ethan Wright",
+          "email": "ethan.wright@example.org"
+        },
+        "placed_at": "2026-11-02",
+        "status": "processing",
+        "items": [
+          {
+            "sku": "KP-GRD-HND",
+            "name": "Hand Grinder",
+            "qty": 1,
+            "unit_price": 79
+          },
+          {
+            "sku": "KP-SCL-01",
+            "name": "Digital Coffee Scale",
+            "qty": 1,
+            "unit_price": 49
+          }
+        ],
+        "subtotal": 128,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": null,
+          "tracking": null,
+          "events": []
+        },
+        "total": 128,
+        "payment": {
+          "method": "Visa •••• 8710",
+          "charges": [
+            {
+              "id": "ch_4830_1",
+              "amount": 128,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-11-02"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Ethan wants the shipping address on order #4830, which is still processing, changed to his new address before it ships.",
+        "reply": "Hi Ethan,\n\nGood news: order #4830 (Hand Grinder and Digital Coffee Scale) hasn't shipped yet, so we can still change the address. We're updating it to:\n\n2218 SE Alder St, Apt 4\nPortland, OR 97214\n\nOrders ship within 1–2 business days. Standard shipping usually takes 3–7 business days after that. You'll get your tracking details by email when it goes out, so you can check the new address there.\n\nSince you're in Portland, you could also pick the order up at our Portland workshop while it's still processing. Just reply if you'd like to do that.\n\nCongrats on the move!\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "change_address",
+            "detail": "Order #4830: update the shipping address to 2218 SE Alder St, Apt 4, Portland, OR 97214. Do this before fulfilment; the order is still processing."
+          }
+        ],
+        "internal_note": "Urgent: change the address before the order is picked and packed. The sender's email matches the email on the order. Before sending, check the status is still 'processing'. If it has shipped, change the reply to explain how to redirect the parcel with the carrier.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e07",
+      "email": {
+        "id": "e07",
+        "from_name": "Elena Petrova",
+        "from_email": "elena.petrova@example.com",
+        "received_at": "2026-11-03T08:30:00Z",
+        "subject": "Grinder arrived broken",
+        "body": "Hello,\n\nMy Burr Grinder Pro (order #4809) arrived yesterday and the hopper is cracked and the box was crushed on one side. I've attached photos. Very disappointed as this was a birthday present for my husband.\n\nElena"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 10959.509249999996,
+        "lookup_ms": 0.020041000003402587,
+        "draft_ms": 10498.073875000002,
+        "total_ms": 21458.066749999998
+      },
+      "cost_usd": 0.028639200000000004,
+      "created_at": "2026-11-05T11:00:13.038Z",
+      "triage": {
+        "backend": "d3",
+        "category": "refund",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4809",
+        "confidence": 0.9974340980381058,
+        "probabilities": {
+          "billing": 0.00008836303293690977,
+          "shipping": 0.0016111547128664005,
+          "refund": 0.9974340980381058,
+          "bug": 0.00026850504414999105,
+          "other": 0.000597879171940895
+        }
+      },
+      "order": {
+        "id": "4809",
+        "customer": {
+          "name": "Elena Petrova",
+          "email": "elena.petrova@example.com"
+        },
+        "placed_at": "2026-10-28",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-GRD-PRO",
+            "name": "Burr Grinder Pro",
+            "qty": 1,
+            "unit_price": 189
+          }
+        ],
+        "subtotal": 189,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "UPS",
+          "tracking": "1ZKP48098339105359",
+          "events": [
+            {
+              "date": "2026-10-29",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-11-02",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 189,
+        "payment": {
+          "method": "Visa •••• 7933",
+          "charges": [
+            {
+              "id": "ch_4809_1",
+              "amount": 189,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-28"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Elena's Burr Grinder Pro (order #4809) arrived with a cracked hopper and a crushed box, and she has sent photos.",
+        "reply": "Hi Elena,\n\nI'm so sorry your Burr Grinder Pro arrived broken, especially when it was meant to be a birthday present for your husband. A cracked hopper and a crushed box clearly point to damage in transit, and we'll cover this in full.\n\nThank you for sending the photos. You can choose what happens next:\n\n1. A free replacement Burr Grinder Pro, shipped to you at no cost, or\n2. A full refund of $189.00 to your Visa ending in 7933.\n\nJust reply and tell me which you'd like. A replacement will leave our Portland workshop within 1–2 business days of your reply. A refund usually shows up on your card within 5–10 business days.\n\nPlease keep the damaged grinder and its box for now, in case the carrier needs them for the damage claim. We'll let you know if anything else is needed.\n\nSorry again for the disappointment. We'll get this sorted quickly.\n\nWarm regards,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "open_carrier_claim",
+            "detail": "Open a UPS damage claim for order #4809 (tracking 1ZKP48098339105359, delivered 2026-11-02). Burr Grinder Pro arrived with a cracked hopper and a box crushed on one side. Use the customer's photos as evidence."
+          },
+          {
+            "type": "none",
+            "detail": "Waiting for the customer to choose. Then either send a free replacement Burr Grinder Pro (KP-GRD-PRO) or refund $189.00 in full to Visa •••• 7933 (charge ch_4809_1)."
+          }
+        ],
+        "internal_note": "Check that the photos are actually attached before approving. The draft thanks her for them; if they're missing, change it to ask for them. Also, the order says 'standard' shipping but the carrier is UPS (policy says standard ships by USPS), so check whether the shipping method on the order is correct.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e08",
+      "email": {
+        "id": "e08",
+        "from_name": "Lukas Wagner",
+        "from_email": "lukas@wagnerstudio.example",
+        "received_at": "2026-11-02T16:45:00Z",
+        "subject": "Invoice with company details for #4815",
+        "body": "Hi,\n\nCould you send an invoice for order 4815 made out to Wagner Studio LLC, 410 Main St, Boise ID 83702, EIN 84-3920117? Our accountant needs it for the expense report.\n\nRegards,\nLukas Wagner"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 11311.908041999995,
+        "lookup_ms": 0.020833000002312474,
+        "draft_ms": 8214.559334000005,
+        "total_ms": 19526.945791000006
+      },
+      "cost_usd": 0.025115199999999997,
+      "created_at": "2026-11-05T11:00:16.302Z",
+      "triage": {
+        "backend": "d3",
+        "category": "billing",
+        "priority": "normal",
+        "sentiment": "neutral",
+        "order_id": "4815",
+        "confidence": 0.9931931924637853,
+        "probabilities": {
+          "billing": 0.9931931924637853,
+          "shipping": 0.0006366084455524198,
+          "refund": 0.0001308410697492614,
+          "bug": 0.0002295983974848678,
+          "other": 0.005809759623428078
+        }
+      },
+      "order": {
+        "id": "4815",
+        "customer": {
+          "name": "Lukas Wagner",
+          "email": "lukas@wagnerstudio.example"
+        },
+        "placed_at": "2026-10-22",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-GRD-PRO",
+            "name": "Burr Grinder Pro",
+            "qty": 2,
+            "unit_price": 189
+          },
+          {
+            "sku": "KP-SCL-01",
+            "name": "Digital Coffee Scale",
+            "qty": 2,
+            "unit_price": 49
+          }
+        ],
+        "subtotal": 476,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "USPS",
+          "tracking": "9400111204815399331519",
+          "events": [
+            {
+              "date": "2026-10-23",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-27",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 476,
+        "payment": {
+          "method": "Visa •••• 8155",
+          "charges": [
+            {
+              "id": "ch_4815_1",
+              "amount": 476,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-22"
+            }
+          ]
+        },
+        "company": "Wagner Studio LLC"
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Lukas wants a company invoice for order #4815 made out to Wagner Studio LLC, with the company's address and EIN.",
+        "reply": "Hi Lukas,\n\nThanks for getting in touch. We'll send you an invoice for order #4815 with these details:\n\nWagner Studio LLC\n410 Main St, Boise ID 83702\nEIN 84-3920117\n\nThe invoice will list the order placed on October 22, 2026:\n- 2 × Burr Grinder Pro at $189.00\n- 2 × Digital Coffee Scale at $49.00\n- Standard shipping: free\n- Total: $476.00 USD, paid by Visa ending in 8155\n\nIt will come to this email address. If your accountant needs anything else on it, like a PO number or a different contact name, just reply and let us know.\n\nNext time, you can also download an invoice yourself from the order page.\n\nBest,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "send_invoice",
+            "detail": "Issue a company invoice for order #4815 to Wagner Studio LLC, 410 Main St, Boise ID 83702, EIN 84-3920117. Line items: 2× Burr Grinder Pro @ $189, 2× Digital Coffee Scale @ $49, free standard shipping. Total $476.00 USD (paid by Visa ••8155, charge ch_4815_1). Email it to lukas@wagnerstudio.example."
+          }
+        ],
+        "internal_note": "The sender's email and the company name both match the order, so this looks routine. The address and EIN come only from the customer's email and aren't on file, so check them against the request before you issue the invoice.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e09",
+      "email": {
+        "id": "e09",
+        "from_name": "Rina Takahashi",
+        "from_email": "rina.t@example.com",
+        "received_at": "2026-11-03T07:33:00Z",
+        "subject": "Apple Pay not working at checkout",
+        "body": "Every time I try to pay with Apple Pay I get 'Something went wrong, please try again'. Tried Safari on iPhone and Mac. Card payment by hand works but it's annoying. FYI."
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 9410.168709000005,
+        "lookup_ms": 0.02220800000213785,
+        "draft_ms": 9448.596208999996,
+        "total_ms": 18859.307583
+      },
+      "cost_usd": 0.0198232,
+      "created_at": "2026-11-05T11:00:21.489Z",
+      "triage": {
+        "backend": "d3",
+        "category": "bug",
+        "priority": "low",
+        "sentiment": "frustrated",
+        "order_id": null,
+        "confidence": 0.9641648878387032,
+        "probabilities": {
+          "billing": 0.03136141517356114,
+          "shipping": 0.00014869682107396124,
+          "refund": 0.0005477132949374506,
+          "bug": 0.9641648878387032,
+          "other": 0.003777286871724175
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "Customer reports that Apple Pay fails at checkout with \"Something went wrong\" in Safari on both iPhone and Mac; she managed to pay by entering her card manually.",
+        "reply": "Hi Rina,\n\nThank you for letting us know, and I'm sorry Apple Pay has been giving you trouble. We accept Apple Pay, so it should work at checkout. Since you get the same error in Safari on both your iPhone and your Mac, the problem is most likely on our side, not with your devices.\n\nI've passed this to our team so they can look into it. To help them track it down, could you tell me roughly when you last tried, and whether you saw the error when the Apple Pay sheet first opened or after you confirmed the payment? A screenshot would help too, if you have one.\n\nThanks for your patience, and for paying by card in the meantime. A teammate will follow up once we know more.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "fix_bug",
+            "detail": "Apple Pay checkout fails with 'Something went wrong, please try again' in Safari on both iOS and macOS. Paying by entering a card manually works. Check the Apple Pay setup with our payment provider (domain verification, merchant certificate) and the checkout error logs from around 2026-11-03."
+          }
+        ],
+        "internal_note": "No order is linked to this sender, so I couldn't check order or payment records. The error happens on two different Apple devices, which points to a site-wide Apple Pay problem, so other customers may be hitting it too.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e10",
+      "email": {
+        "id": "e10",
+        "from_name": "Owen Hughes",
+        "from_email": "owen.hughes@example.net",
+        "received_at": "2026-11-02T19:20:00Z",
+        "subject": "Gooseneck kettle on induction?",
+        "body": "Quick question before I buy: does the stovetop gooseneck kettle work on an induction cooktop?\n\nCheers, Owen"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 9364.406375000006,
+        "lookup_ms": 0.01583299999765586,
+        "draft_ms": 6876.410208000001,
+        "total_ms": 16241.057583000002
+      },
+      "cost_usd": 0.0184992,
+      "created_at": "2026-11-05T11:00:24.633Z",
+      "triage": {
+        "backend": "d3",
+        "category": "other",
+        "priority": "low",
+        "sentiment": "neutral",
+        "order_id": null,
+        "confidence": 0.9926321186116833,
+        "probabilities": {
+          "billing": 0.0002448991211249631,
+          "shipping": 0.00044893911405601895,
+          "refund": 0.0023110894671700016,
+          "bug": 0.004362953685965749,
+          "other": 0.9926321186116833
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "A customer who hasn't ordered yet wants to know if the stovetop gooseneck kettle works on an induction cooktop.",
+        "reply": "Hi Owen,\n\nThanks for checking before you buy. I want to give you a correct answer rather than a guess. I've asked a teammate who knows the product to confirm whether the stovetop gooseneck kettle works on induction, and they'll email you back soon.\n\nIn case it's useful while you decide: you can return unused items in their original packaging within 30 days of delivery, and all our kettles come with a 2-year warranty against defects.\n\nTalk soon,\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "forward_to_owner",
+            "detail": "Owen is asking before he buys whether the stovetop gooseneck kettle works on induction cooktops. Please confirm from the product specs (e.g. magnetic stainless or induction-ready base) and reply to owen.hughes@example.net."
+          }
+        ],
+        "internal_note": "I don't have product specs, so the draft doesn't say yes or no on induction. Someone needs to check the specs and send the answer. He hasn't ordered and there's no order on file.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e11",
+      "email": {
+        "id": "e11",
+        "from_name": "Aisha Bello",
+        "from_email": "aisha.bello@example.org",
+        "received_at": "2026-11-03T06:12:00Z",
+        "subject": "Order 4803 says delivered but I never got it",
+        "body": "Hi,\n\nTracking for #4803 says delivered two days ago but there's nothing at my door, in the mailroom or with neighbours. What happens now?\n\nAisha"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 9338.412083000003,
+        "lookup_ms": 0.029708000001846813,
+        "draft_ms": 15840.185750000004,
+        "total_ms": 25178.948791000003
+      },
+      "cost_usd": 0.0361552,
+      "created_at": "2026-11-05T11:00:27.665Z",
+      "triage": {
+        "backend": "d3",
+        "category": "shipping",
+        "priority": "urgent",
+        "sentiment": "frustrated",
+        "order_id": "4803",
+        "confidence": 0.9539516768082164,
+        "probabilities": {
+          "billing": 0.0002744111173546409,
+          "shipping": 0.9539516768082164,
+          "refund": 0.04458237532815285,
+          "bug": 0.0004971583943684249,
+          "other": 0.0006943783519077235
+        }
+      },
+      "order": {
+        "id": "4803",
+        "customer": {
+          "name": "Aisha Bello",
+          "email": "aisha.bello@example.org"
+        },
+        "placed_at": "2026-10-26",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-SCL-01",
+            "name": "Digital Coffee Scale",
+            "qty": 1,
+            "unit_price": 49
+          },
+          {
+            "sku": "KP-FLT-100",
+            "name": "Paper Filters (100)",
+            "qty": 2,
+            "unit_price": 8
+          }
+        ],
+        "subtotal": 65,
+        "shipping": {
+          "method": "standard",
+          "fee": 6.9,
+          "carrier": "USPS",
+          "tracking": "9400111204803398336301",
+          "events": [
+            {
+              "date": "2026-10-27",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-11-01",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 71.9,
+        "payment": {
+          "method": "Visa •••• 7711",
+          "charges": [
+            {
+              "id": "ch_4803_1",
+              "amount": 71.9,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-26"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Aisha says order #4803 shows as delivered on Nov 1 but never arrived. She has already checked her door, the mailroom and her neighbours.",
+        "reply": "Hi Aisha,\n\nI'm sorry your order hasn't turned up. That's really frustrating, especially since the tracking says it was delivered.\n\nUSPS tracking (9400111204803398336301) shows your parcel left Portland on October 27 and was marked delivered on November 1. You've already checked your door, the mailroom and your neighbours, and about 48 hours have now passed since that scan. So here's what we're doing:\n\n1. We're opening a claim with USPS for the missing parcel.\n2. We're sending you a free replacement of the whole order: 1 Digital Coffee Scale and 2 packs of Paper Filters (100). You don't need to pay anything.\n\nThe replacement will ship from Portland within 1–2 business days by USPS standard shipping, which usually takes 3–7 business days. We'll email you the new tracking number once it ships. It will go to the same address as your original order. If anything about that address needs changing (for example, a unit number), just reply to this email before it ships.\n\nIf the original parcel turns up in the meantime, please let us know.\n\nThanks for your patience, Aisha.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "open_carrier_claim",
+            "detail": "USPS claim for order #4803, tracking 9400111204803398336301. Marked delivered 2026-11-01, but the customer reports it never arrived (she checked her door, mailroom and neighbours)."
+          },
+          {
+            "type": "reship",
+            "detail": "Reship order #4803 at no charge: 1x Digital Coffee Scale (KP-SCL-01), 2x Paper Filters (100) (KP-FLT-100). USPS standard to the original shipping address. Email the customer the new tracking number."
+          }
+        ],
+        "internal_note": "The delivery scan was Nov 1 and her email came in Nov 3 at 06:12 UTC, so the 48-hour wait is only just over and depends on the scan time. Check the exact scan time before the claim and reship go out. The shipping address isn't in the order data, so check it before reshipping.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e12",
+      "email": {
+        "id": "e12",
+        "from_name": "Chloe Adams",
+        "from_email": "chloe.adams@example.com",
+        "received_at": "2026-11-02T14:02:00Z",
+        "subject": "Wrong colour mugs",
+        "body": "Hello! I ordered two sets of the white stoneware mugs (#4818) but received black ones. They're nice but they don't match my kitchen at all 😅 Can you swap them?"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 5472.153791999997,
+        "lookup_ms": 0.023166999999375548,
+        "draft_ms": 11770.702624999998,
+        "total_ms": 17243.464959000004
+      },
+      "cost_usd": 0.027799200000000003,
+      "created_at": "2026-11-05T11:00:34.496Z",
+      "triage": {
+        "backend": "d3",
+        "category": "refund",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4818",
+        "confidence": 0.9893962420263352,
+        "probabilities": {
+          "billing": 0.00017414874473136653,
+          "shipping": 0.0012432160617224556,
+          "refund": 0.9893962420263352,
+          "bug": 0.0011304065917296178,
+          "other": 0.008055986575481336
+        }
+      },
+      "order": {
+        "id": "4818",
+        "customer": {
+          "name": "Chloe Adams",
+          "email": "chloe.adams@example.com"
+        },
+        "placed_at": "2026-10-26",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-MUG-W",
+            "name": "Stoneware Mug Set, White (2)",
+            "qty": 2,
+            "unit_price": 42
+          }
+        ],
+        "subtotal": 84,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "USPS",
+          "tracking": "9400111204818399580324",
+          "events": [
+            {
+              "date": "2026-10-27",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-31",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 84,
+        "payment": {
+          "method": "Visa •••• 8266",
+          "charges": [
+            {
+              "id": "ch_4818_1",
+              "amount": 84,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-26"
+            }
+          ]
+        },
+        "fulfilment_note": "Picked SKU KP-MUG-B x2 (scan mismatch flagged)"
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Chloe got 2 black mug sets instead of the 2 white sets she ordered (our picking error) and wants to swap them.",
+        "reply": "Hi Chloe,\n\nSorry about this, and thanks for letting us know! You're right. Our warehouse notes show we picked the black mug sets (KP-MUG-B) for your order instead of the white ones, and our scanner flagged the mismatch. That's our mistake, so we'll cover the whole swap.\n\nHere's what happens next:\n- We'll send you 2 Stoneware Mug Sets in White at no cost. They'll ship from Portland within 1–2 business days, and standard USPS delivery takes 3–7 business days. We'll email you the tracking details when they ship.\n- We'll also email you a prepaid return label for the 2 black sets, so returning them costs you nothing. Please use the original packaging if you still have it.\n\nIf you'd prefer a full refund instead of the replacement, just reply and let us know. Either option is fine.\n\nSorry again for the mix-up, and I hope the white ones look great in your kitchen!\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "send_replacement",
+            "detail": "Order #4818: ship 2x Stoneware Mug Set, White (KP-MUG-W) at no charge, standard USPS, to the original shipping address."
+          },
+          {
+            "type": "send_return_label",
+            "detail": "Prepaid return label for 2x Stoneware Mug Set, Black (KP-MUG-B) sent by mistake on order #4818."
+          }
+        ],
+        "internal_note": "The fulfilment note confirms the picking error: KP-MUG-B x2 was shipped instead of KP-MUG-W x2, and the scan mismatch was flagged. Please check that KP-MUG-W is in stock before sending the replacement. Triage put this under 'refund' and marked her as frustrated, but she's actually friendly and is asking for a swap.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e13",
+      "email": {
+        "id": "e13",
+        "from_name": "Noah Patel",
+        "from_email": "noah.patel@example.com",
+        "received_at": "2026-11-03T04:48:00Z",
+        "subject": "Promo code didn't apply",
+        "body": "Hi, I used WELCOME10 when ordering the electric kettle (order 4824) and it said applied, but I was charged the full $159. Can you fix that?\n\nNoah"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 6910.937708999998,
+        "lookup_ms": 0.04512500000419095,
+        "draft_ms": 14352.514458999998,
+        "total_ms": 21264.001875
+      },
+      "cost_usd": 0.029347200000000004,
+      "created_at": "2026-11-05T11:00:35.829Z",
+      "triage": {
+        "backend": "d3",
+        "category": "billing",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4824",
+        "confidence": 0.9735119238460472,
+        "probabilities": {
+          "billing": 0.9735119238460472,
+          "shipping": 0.00018629558441104937,
+          "refund": 0.0006034581022177465,
+          "bug": 0.02473902151818442,
+          "other": 0.0009593009491395221
+        }
+      },
+      "order": {
+        "id": "4824",
+        "customer": {
+          "name": "Noah Patel",
+          "email": "noah.patel@example.com"
+        },
+        "placed_at": "2026-11-01",
+        "status": "processing",
+        "items": [
+          {
+            "sku": "KP-KTL-EL",
+            "name": "Electric Gooseneck Kettle",
+            "qty": 1,
+            "unit_price": 159
+          }
+        ],
+        "subtotal": 159,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": null,
+          "tracking": null,
+          "events": []
+        },
+        "total": 159,
+        "payment": {
+          "method": "Visa •••• 8488",
+          "charges": [
+            {
+              "id": "ch_4824_1",
+              "amount": 159,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Noah says promo code WELCOME10 showed as applied on order 4824 but he was charged the full $159, and he wants the discount.",
+        "reply": "Hi Noah,\n\nThanks for letting us know, and sorry about this. I checked order 4824 for your Electric Gooseneck Kettle. You're right: no discount was applied, and the full $159.00 was charged to your Visa ending 8488 on November 1.\n\nWe can't add a code to an order after it's been placed. But because you ordered within the last 7 days, we can refund the difference for a valid code. A teammate is checking WELCOME10 against your order now. If it's valid, we'll refund the discount amount to your Visa ending 8488 and email you to confirm the amount.\n\nYour order is still processing and will ship as normal. This doesn't affect it.\n\nWarm regards,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "partial_refund",
+            "detail": "Check that WELCOME10 is valid and that order 4824 qualifies (for example, first order or any minimum spend). If it does, refund the discount amount (10% would be $15.90; $10 off would be $10.00) to Visa •••• 8488 on charge ch_4824_1. It must be done by 2026-11-08, the 7-day window from the 2026-11-01 order. Then confirm the amount to the customer."
+          }
+        ],
+        "internal_note": "The order shows subtotal = total = $159 with no discount recorded, so the code didn't apply even though the customer saw 'applied'. That could be a checkout bug, so it may be worth flagging. We don't know if WELCOME10 is valid or what it's worth. Check that before refunding, and process it before 2026-11-08.",
+        "needs_attention": true
+      }
+    },
+    {
+      "id": "e14",
+      "email": {
+        "id": "e14",
+        "from_name": "Mia Johnson",
+        "from_email": "mia.johnson@example.com",
+        "received_at": "2026-11-03T08:58:00Z",
+        "subject": "Cancel order 4831 please",
+        "body": "Hi, I ordered a glass carafe yesterday by mistake (already have one!). Can you cancel order #4831 and refund me? Thank you!\n\nMia"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 5066.369374999995,
+        "lookup_ms": 0.01800000001094304,
+        "draft_ms": 6658.850040999998,
+        "total_ms": 11725.55075000001
+      },
+      "cost_usd": 0.0196432,
+      "created_at": "2026-11-05T11:00:40.348Z",
+      "triage": {
+        "backend": "d3",
+        "category": "refund",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4831",
+        "confidence": 0.9951500915803807,
+        "probabilities": {
+          "billing": 0.0008638014636060894,
+          "shipping": 0.0008234947562196575,
+          "refund": 0.9951500915803807,
+          "bug": 0.0024213184139991696,
+          "other": 0.0007412937857944312
+        }
+      },
+      "order": {
+        "id": "4831",
+        "customer": {
+          "name": "Mia Johnson",
+          "email": "mia.johnson@example.com"
+        },
+        "placed_at": "2026-11-02",
+        "status": "processing",
+        "items": [
+          {
+            "sku": "KP-CRF-6",
+            "name": "Glass Carafe 600 ml",
+            "qty": 1,
+            "unit_price": 36
+          }
+        ],
+        "subtotal": 36,
+        "shipping": {
+          "method": "standard",
+          "fee": 6.9,
+          "carrier": null,
+          "tracking": null,
+          "events": []
+        },
+        "total": 42.9,
+        "payment": {
+          "method": "Visa •••• 8747",
+          "charges": [
+            {
+              "id": "ch_4831_1",
+              "amount": 42.9,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-11-02"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Mia ordered a glass carafe by mistake and wants order #4831 cancelled and refunded.",
+        "reply": "Hi Mia,\n\nNo problem at all, that happens! Order #4831 (Glass Carafe 600 ml) hasn't shipped yet, so we can cancel it for you.\n\nWe'll refund the full $42.90 to your Visa ending in 8747. Depending on your bank, it can take 5–10 business days to show up on your statement.\n\nIf you need anything else for your coffee setup, just let us know.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "cancel_order",
+            "detail": "Cancel order #4831 (1x Glass Carafe 600 ml, KP-CRF-6). Status is still processing."
+          },
+          {
+            "type": "refund",
+            "detail": "Full refund of $42.90 USD (charge ch_4831_1, $36.00 item + $6.90 standard shipping) to Visa •••• 8747."
+          }
+        ],
+        "internal_note": "Order is still 'processing' with no carrier or tracking, so it can be cancelled under policy. Check it hasn't been picked or packed before cancelling. Triage marked her 'frustrated', but the email reads as polite.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e15",
+      "email": {
+        "id": "e15",
+        "from_name": "Victor Hale",
+        "from_email": "vhale@example.com",
+        "received_at": "2026-11-02T21:37:00Z",
+        "subject": "App keeps crashing",
+        "body": "Your iOS app crashes every time I tap 'Order history'. iPhone 15, iOS 20.1, latest app version. Reinstalling didn't help."
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 7002.722083000008,
+        "lookup_ms": 0.034333999996306375,
+        "draft_ms": 10137.856625,
+        "total_ms": 17140.87583299999
+      },
+      "cost_usd": 0.0245632,
+      "created_at": "2026-11-05T11:00:40.874Z",
+      "triage": {
+        "backend": "d3",
+        "category": "bug",
+        "priority": "low",
+        "sentiment": "frustrated",
+        "order_id": null,
+        "confidence": 0.9985685404565371,
+        "probabilities": {
+          "billing": 0.000051928359550054946,
+          "shipping": 0.00005152454385199336,
+          "refund": 0.0003443302260366105,
+          "bug": 0.9985685404565371,
+          "other": 0.0009836764140242094
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "Victor says the iOS app crashes every time he taps 'Order history' (iPhone 15, iOS 20.1, latest version), and reinstalling didn't fix it.",
+        "reply": "Hi Victor,\n\nThanks for letting us know, and sorry about the trouble. An app that crashes on the same screen every time is really annoying, especially after you've already tried reinstalling.\n\nI've passed your report to our team with your device details (iPhone 15, iOS 20.1, latest app version) so they can look into the crash on the Order history screen. A teammate will follow up with you once we know more.\n\nTo help them find the cause faster, could you send me:\n- The exact app version number (in the App Store or the app's settings)\n- The email address on your Kettle & Pine account, since I couldn't find an account under this address\n- A screenshot or short screen recording of the crash, if that's easy for you\n\nIn the meantime, if you need details on any order, just reply here and I'll look it up for you.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "fix_bug",
+            "detail": "The iOS app crashes every time you tap 'Order history'. Device: iPhone 15, iOS 20.1, latest app version. Reinstalling doesn't fix it. Reported by Victor Hale (vhale@example.com)."
+          },
+          {
+            "type": "forward_to_owner",
+            "detail": "Send the bug report to the app/engineering owner so someone can follow up with the customer once there's an update."
+          }
+        ],
+        "internal_note": "No order or account was found for vhale@example.com, so he may use a different email for the app, and I've asked him for it. I didn't promise a fix timeline. Please check whether other users are reporting the same Order history crash on iOS 20.1.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e16",
+      "email": {
+        "id": "e16",
+        "from_name": "Top Rank Digital",
+        "from_email": "growth@toprank-seo.example",
+        "received_at": "2026-11-02T11:00:00Z",
+        "subject": "Get your store to #1 on Google in 30 days!!!",
+        "body": "Dear Business Owner,\n\nWe noticed your website is not ranking for important keywords. Our proven SEO package guarantees first page results in 30 days for only $299/month. Reply YES to get started!"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1666.4981249999983,
+        "lookup_ms": 0.027833000000100583,
+        "draft_ms": 6827.242041000005,
+        "total_ms": 8494.241666000002
+      },
+      "cost_usd": 0.017847199999999997,
+      "created_at": "2026-11-05T11:00:51.740Z",
+      "triage": {
+        "backend": "d3",
+        "category": "other",
+        "priority": "low",
+        "sentiment": "neutral",
+        "order_id": null,
+        "confidence": 0.723666999659827,
+        "probabilities": {
+          "billing": 0.011081490250373737,
+          "shipping": 0.0010960107248281466,
+          "refund": 0.0027586022745167034,
+          "bug": 0.26139689709045444,
+          "other": 0.723666999659827
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "Unsolicited SEO sales pitch, not a customer request.",
+        "reply": "Hello,\n\nThanks for reaching out. We're not interested in SEO services at this time, so please take us off your mailing list.\n\nBest,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "none",
+            "detail": "Marketing spam, no customer or order involved. Archive it or mark it as spam. Best not to send a reply."
+          }
+        ],
+        "internal_note": "This is a cold SEO pitch from growth@toprank-seo.example, with no matching order. Replying to spam usually brings more spam, so I'd archive it rather than send the decline. Triage labelled it 'other' at 0.72 confidence and 0.26 'bug', but it's neither.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e17",
+      "email": {
+        "id": "e17",
+        "from_name": "Marie Tremblay",
+        "from_email": "marie.tremblay@example.ca",
+        "received_at": "2026-11-02T17:15:00Z",
+        "subject": "Shipping to Canada",
+        "body": "Hello, do you ship to Quebec? How long does it take and how much is shipping? Thinking of ordering the burr grinder."
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 3583.534917000012,
+        "lookup_ms": 0.02562499999476131,
+        "draft_ms": 8799.240416,
+        "total_ms": 12383.330000000002
+      },
+      "cost_usd": 0.0187232,
+      "created_at": "2026-11-05T11:00:52.074Z",
+      "triage": {
+        "backend": "d3",
+        "category": "shipping",
+        "priority": "low",
+        "sentiment": "neutral",
+        "order_id": null,
+        "confidence": 0.9328634633037509,
+        "probabilities": {
+          "billing": 0.03414355924713926,
+          "shipping": 0.9328634633037509,
+          "refund": 0.00035671068649048777,
+          "bug": 0.0008565829969573717,
+          "other": 0.031779683765662
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "A prospective customer in Quebec wants to know if we ship to Canada, how long it takes and what it costs, before ordering the burr grinder.",
+        "reply": "Hi Marie,\n\nThanks for getting in touch. Yes, we ship to Quebec!\n\n- Shipping to anywhere in Canada is a flat $19.00 USD.\n- Orders leave our Portland, Oregon workshop within 1–2 business days. After that, delivery to Canada usually takes 7–14 business days.\n- All our prices are in US dollars.\n\nOur burr grinder also comes with a 2-year warranty against defects, so you're covered after it arrives.\n\nIf you have any other questions before you order, just reply to this email.\n\nWarm regards,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "none",
+            "detail": "Pre-sale question only. There's no order yet."
+          }
+        ],
+        "internal_note": "This is a pre-sale question and there's no order. Our policy says nothing about Canadian customs or duties, so the reply leaves them out. If she asks about them, a teammate should answer.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e18",
+      "email": {
+        "id": "e18",
+        "from_name": "Marco Silva",
+        "from_email": "marco.silva@example.com",
+        "received_at": "2026-11-03T03:22:00Z",
+        "subject": "Still no refund for my return",
+        "body": "Hello,\n\nI returned the hand grinder (order 4807) and the tracking shows you received it two weeks ago. I still haven't got my $79 back. When will the refund be processed?\n\nMarco"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 5222.084959,
+        "lookup_ms": 0.014375000013387762,
+        "draft_ms": 9334.178707999992,
+        "total_ms": 14556.514834000001
+      },
+      "cost_usd": 0.025703200000000002,
+      "created_at": "2026-11-05T11:00:52.844Z",
+      "triage": {
+        "backend": "d3",
+        "category": "refund",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4807",
+        "confidence": 0.993776066911538,
+        "probabilities": {
+          "billing": 0.0018531676314782466,
+          "shipping": 0.0028907320925719384,
+          "refund": 0.993776066911538,
+          "bug": 0.0009392166241827525,
+          "other": 0.0005408167402290824
+        }
+      },
+      "order": {
+        "id": "4807",
+        "customer": {
+          "name": "Marco Silva",
+          "email": "marco.silva@example.com"
+        },
+        "placed_at": "2026-09-24",
+        "status": "returned",
+        "items": [
+          {
+            "sku": "KP-GRD-HND",
+            "name": "Hand Grinder",
+            "qty": 1,
+            "unit_price": 79
+          }
+        ],
+        "subtotal": 79,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "USPS",
+          "tracking": "9400111204807398668040",
+          "events": [
+            {
+              "date": "2026-09-25",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-09-29",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 79,
+        "payment": {
+          "method": "Visa •••• 7859",
+          "charges": [
+            {
+              "id": "ch_4807_1",
+              "amount": 79,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-09-24"
+            }
+          ]
+        },
+        "return": {
+          "requested": "2026-10-04",
+          "received": "2026-10-20",
+          "refund_status": "pending",
+          "refund_amount": 79
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Marco wants to know why his $79 refund for the returned Hand Grinder (order 4807) still hasn't arrived two weeks after we received the return.",
+        "reply": "Hi Marco,\n\nI'm sorry about the wait, and thanks for following up. You're right: we received your Hand Grinder back on October 20, but the refund is still marked as pending on our side. It should have gone through by now. That delay is on us.\n\nI've flagged it so the full $79 is issued now to your Visa ending in 7859. We'll email you as soon as it's sent. After that, it may take your bank a few days to show it on your statement.\n\nIf you don't see the confirmation email in the next couple of days, just reply here and I'll look into it right away.\n\nThanks for your patience, Marco.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "refund",
+            "detail": "Issue full refund of $79.00 USD to Visa •••• 7859 for order 4807 (charge ch_4807_1). Return received 2026-10-20, refund_status still 'pending'. Then send the customer a confirmation email."
+          }
+        ],
+        "internal_note": "The return arrived 2026-10-20, and the policy refund window (5–10 business days after receipt) ended around Nov 3. The refund is late or stuck as 'pending', so please check why it didn't go through before issuing it. There's one captured charge of $79, so no risk of refunding twice.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e19",
+      "email": {
+        "id": "e19",
+        "from_name": "Sara Lindqvist",
+        "from_email": "sara.lindqvist@example.com",
+        "received_at": "2026-11-03T02:10:00Z",
+        "subject": "Card declined but money taken?",
+        "body": "Hi, I tried to order last night and the checkout said my card was declined. But my banking app shows a pending $87 payment to Kettle & Pine. Did my order go through or not? I don't want to pay twice."
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 3205.9559169999993,
+        "lookup_ms": 0.08433299999160226,
+        "draft_ms": 10845.745332999999,
+        "total_ms": 14052.181167000002
+      },
+      "cost_usd": 0.022847199999999998,
+      "created_at": "2026-11-05T11:00:57.093Z",
+      "triage": {
+        "backend": "d3",
+        "category": "billing",
+        "priority": "urgent",
+        "sentiment": "frustrated",
+        "order_id": null,
+        "confidence": 0.7754544749352222,
+        "probabilities": {
+          "billing": 0.7754544749352222,
+          "shipping": 0.032214176464790724,
+          "refund": 0.050128039836295636,
+          "bug": 0.13750334320944907,
+          "other": 0.00469996555424236
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "Sara's card was declined at checkout, but her bank shows a pending $87 charge to Kettle & Pine. She wants to know if the order went through and doesn't want to pay twice.",
+        "reply": "Hi Sara,\n\nI'm sorry about the confusion at checkout. Seeing money leave your account after a \"declined\" message is stressful.\n\nI couldn't find an order under this email address, so it looks like the order didn't go through. When a card is declined, the bank sometimes still places a temporary hold, called a pending authorization. That is probably the $87 you're seeing. It isn't a completed charge, and it usually disappears by itself within 3–5 business days.\n\nSo I can confirm this for certain in our payment system, could you send me:\n- The email address you used at checkout, if it wasn't this one\n- The rough time you tried to order\n- The card type and only its last 4 digits (please don't send the full card number)\n\nIf our system shows that a charge actually went through, we'll refund it right away. And if you'd still like your order, you're welcome to try again. Your card will only be charged once for an order that goes through, and the pending hold will drop off by itself.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "none",
+            "detail": "Wait for Sara's reply. Then search the payment system for an $87 authorization or charge around 2026-11-02, using her checkout email, time and the last 4 card digits. If a real capture exists with no order, refund it right away."
+          }
+        ],
+        "internal_note": "No order exists for this email. This is most likely a pending authorization from a declined card, but please check the payment processor for an $87 transaction on 2026-11-02/03 before assuming that. She may have used a different email at checkout.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e20",
+      "email": {
+        "id": "e20",
+        "from_name": "Julien Moreau",
+        "from_email": "julien.moreau@example.ca",
+        "received_at": "2026-11-03T05:05:00Z",
+        "subject": "Commande 4826 toujours pas reçue",
+        "body": "Bonjour,\n\nJ'ai commandé une bouilloire col de cygne il y a presque deux semaines (commande n° 4826) et je ne l'ai toujours pas reçue. Pouvez-vous me dire où elle en est ?\n\nMerci,\nJulien"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 4769.086666999996,
+        "lookup_ms": 0.013584000000264496,
+        "draft_ms": 13715.24287500001,
+        "total_ms": 18484.57241600001
+      },
+      "cost_usd": 0.0357152,
+      "created_at": "2026-11-05T11:00:58.015Z",
+      "triage": {
+        "backend": "d3",
+        "category": "shipping",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4826",
+        "confidence": 0.9858620725131941,
+        "probabilities": {
+          "billing": 0.0002598765569773904,
+          "shipping": 0.9858620725131941,
+          "refund": 0.012707670007632284,
+          "bug": 0.00042991889747273453,
+          "other": 0.0007404620247235027
+        }
+      },
+      "order": {
+        "id": "4826",
+        "customer": {
+          "name": "Julien Moreau",
+          "email": "julien.moreau@example.ca"
+        },
+        "placed_at": "2026-10-22",
+        "status": "shipped",
+        "items": [
+          {
+            "sku": "KP-KTL-GN",
+            "name": "Gooseneck Kettle (stovetop)",
+            "qty": 1,
+            "unit_price": 129
+          }
+        ],
+        "subtotal": 129,
+        "shipping": {
+          "method": "canada",
+          "fee": 19,
+          "carrier": "USPS / Canada Post",
+          "tracking": "9400111204826400243803",
+          "events": [
+            {
+              "date": "2026-10-23",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-28",
+              "status": "Customs cleared",
+              "location": "Vancouver, BC"
+            },
+            {
+              "date": "2026-11-01",
+              "status": "In transit",
+              "location": "Montréal, QC"
+            }
+          ]
+        },
+        "total": 148,
+        "payment": {
+          "method": "Visa •••• 8562",
+          "charges": [
+            {
+              "id": "ch_4826_1",
+              "amount": 148,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-22"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Julien wants to know where his gooseneck kettle (order 4826, shipping to Canada) is. He ordered almost two weeks ago.",
+        "reply": "Bonjour Julien,\n\nMerci pour votre message, et désolé pour l'attente. Je comprends que ce soit long.\n\nBonne nouvelle : votre bouilloire col de cygne est bien en route et le suivi bouge normalement. Voici les dernières étapes :\n- 23 octobre : expédiée depuis Portland (Oregon)\n- 28 octobre : dédouanée à Vancouver (C.-B.)\n- 1er novembre : en transit à Montréal (QC)\n\nNuméro de suivi (USPS / Postes Canada) : 9400111204826400243803\n\nPour le Canada, la livraison prend de 7 à 14 jours ouvrables. Votre colis est parti le 23 octobre, il est donc toujours dans les délais. Vous devriez le recevoir au plus tard vers le 12 novembre.\n\nSi le suivi ne bouge plus pendant 7 jours, ou si le colis n'est pas arrivé d'ici là, écrivez-moi. Nous ouvrirons une enquête auprès du transporteur et nous vous proposerons un nouvel envoi ou un remboursement, comme vous préférez.\n\nBonne journée,\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "none",
+            "detail": "No action needed. The parcel is moving (last scan: In transit, Montréal, Nov 1) and is still within the 7–14 business day window for Canada."
+          }
+        ],
+        "internal_note": "The parcel shipped Oct 23. That is 7 business days ago, so it is inside the 7–14 business day window for Canada. The last scan was 2 days ago, so no trace is needed. The '~Nov 12' date is my own count of 14 business days from shipping, not a carrier estimate. Please check it.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e21",
+      "email": {
+        "id": "e21",
+        "from_name": "Gloria Martinez",
+        "from_email": "gloria.martinez@example.com",
+        "received_at": "2026-11-03T08:41:00Z",
+        "subject": "THIRD EMAIL - order 4811",
+        "body": "This is the third time I'm writing. My order 4811 has been 'in transit' for almost two weeks and nobody answers me. This is ridiculous. I want my money back NOW, I'll buy elsewhere."
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 4752.618208,
+        "lookup_ms": 0.01658300000417512,
+        "draft_ms": 11530.868292,
+        "total_ms": 16283.745792000002
+      },
+      "cost_usd": 0.0302312,
+      "created_at": "2026-11-05T11:01:00.235Z",
+      "triage": {
+        "backend": "d3",
+        "category": "shipping",
+        "priority": "urgent",
+        "sentiment": "angry",
+        "order_id": "4811",
+        "confidence": 0.8747214982131284,
+        "probabilities": {
+          "billing": 0.0009137008113313926,
+          "shipping": 0.8747214982131284,
+          "refund": 0.11544765854207621,
+          "bug": 0.006404715407907766,
+          "other": 0.002512427025556205
+        }
+      },
+      "order": {
+        "id": "4811",
+        "customer": {
+          "name": "Gloria Martinez",
+          "email": "gloria.martinez@example.com"
+        },
+        "placed_at": "2026-10-18",
+        "status": "shipped",
+        "items": [
+          {
+            "sku": "KP-KTL-GN",
+            "name": "Gooseneck Kettle (stovetop)",
+            "qty": 1,
+            "unit_price": 129
+          },
+          {
+            "sku": "KP-SCL-01",
+            "name": "Digital Coffee Scale",
+            "qty": 1,
+            "unit_price": 49
+          }
+        ],
+        "subtotal": 178,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "USPS",
+          "tracking": "9400111204811398999780",
+          "events": [
+            {
+              "date": "2026-10-20",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-22",
+              "status": "In transit",
+              "location": "Denver, CO"
+            }
+          ]
+        },
+        "total": 178,
+        "payment": {
+          "method": "Visa •••• 8007",
+          "charges": [
+            {
+              "id": "ch_4811_1",
+              "amount": 178,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-18"
+            }
+          ]
+        },
+        "previous_contacts": 2
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Gloria's order 4811 has been stuck in transit for 12 days. This is her third email and she wants a full refund.",
+        "reply": "Hi Gloria,\n\nI'm very sorry. You've had to write three times, and you should have had an answer long before now. Thank you for sticking with us.\n\nYou're right about the parcel. Order 4811 (Gooseneck Kettle and Digital Coffee Scale) left Portland on October 20 with USPS. The last tracking update was on October 22 in Denver, CO, and there have been no updates since. That's 12 days without movement.\n\nHere's what we're doing today:\n- We're giving you a full refund of $178.00 to your Visa ending in 8007. It usually takes 5–10 business days to show up, depending on your bank.\n- We're opening a trace with USPS so they look for the parcel. You don't need to do anything for this.\n\nYou don't need to send anything back or reply to get the refund. I'll send you a confirmation once it's been processed.\n\nI'm sorry this order went so badly. If you ever want to give us another try, I'd be glad to help personally.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "refund",
+            "detail": "Full refund of $178.00 to Visa •••• 8007 (charge ch_4811_1), order 4811."
+          },
+          {
+            "type": "open_carrier_claim",
+            "detail": "Open a USPS trace for tracking 9400111204811398999780. No updates since Oct 22 (In transit, Denver, CO)."
+          }
+        ],
+        "internal_note": "The customer says this is her third email (previous_contacts = 2), and it looks like neither earlier email got a reply. Please check why. Policy doesn't say what to do if the parcel turns up after we refund, so I didn't promise her anything about that. Decide how to handle it if USPS delivers it.",
+        "needs_attention": true
+      }
+    },
+    {
+      "id": "e22",
+      "email": {
+        "id": "e22",
+        "from_name": "Ken Okafor",
+        "from_email": "ken.okafor@example.com",
+        "received_at": "2026-11-02T13:30:00Z",
+        "subject": "site blank on my phone",
+        "body": "fyi your website just shows a white page on my android phone (chrome). works on laptop."
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 2376.8680409999943,
+        "lookup_ms": 0.025584000002709217,
+        "draft_ms": 7253.745750000002,
+        "total_ms": 9631.351791999987
+      },
+      "cost_usd": 0.0186272,
+      "created_at": "2026-11-05T11:01:04.457Z",
+      "triage": {
+        "backend": "d3",
+        "category": "bug",
+        "priority": "low",
+        "sentiment": "neutral",
+        "order_id": null,
+        "confidence": 0.9957373382846978,
+        "probabilities": {
+          "billing": 0.00008299741803518864,
+          "shipping": 0.00009623755846117952,
+          "refund": 0.0003887167934657807,
+          "bug": 0.9957373382846978,
+          "other": 0.0036947099453400857
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "Ken is reporting that the website shows a blank white page in Chrome on his Android phone. It works on his laptop.",
+        "reply": "Hi Ken,\n\nThanks for letting us know, and I'm sorry the site isn't loading on your phone. I've passed this to our team so they can look into it.\n\nTo help them find the problem, could you send us a few details?\n- Your phone model and Android version\n- Your Chrome version (Chrome menu > Settings > About Chrome)\n- Which page went blank (the homepage, a product page, checkout?)\n- Whether it still happens after you refresh the page or open it in an Incognito tab\n\nA screenshot would help too, if it's easy to take.\n\nUntil it's fixed, the site should keep working on your laptop. If you were in the middle of an order on your phone, just reply here and we'll help you finish it.\n\nThanks again for the heads-up.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "fix_bug",
+            "detail": "Website shows a blank white page in Chrome on Android (customer report, works on desktop). Check the mobile site for JS errors or rendering problems. Device and Chrome version details requested from the customer."
+          }
+        ],
+        "internal_note": "No order is linked to this sender, and it reads like a bug report, not an order problem. Worth checking whether other mobile users are hitting the same blank page, since that could mean lost sales.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e23",
+      "email": {
+        "id": "e23",
+        "from_name": "Tom Becker",
+        "from_email": "tom.becker@example.net",
+        "received_at": "2026-11-02T09:12:00Z",
+        "subject": "Love the kettle!",
+        "body": "Just wanted to say the gooseneck kettle (order 4802) is fantastic. Pour control is perfect and it looks great on the stove. Thanks for the handwritten note in the box too!\n\nTom"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1547.6867090000014,
+        "lookup_ms": 0.012917000000015832,
+        "draft_ms": 6462.532082999998,
+        "total_ms": 8010.694457999998
+      },
+      "cost_usd": 0.019339199999999997,
+      "created_at": "2026-11-05T11:01:07.400Z",
+      "triage": {
+        "backend": "d3",
+        "category": "other",
+        "priority": "low",
+        "sentiment": "positive",
+        "order_id": "4802",
+        "confidence": 0.9593273694652927,
+        "probabilities": {
+          "billing": 0.0017948019683371142,
+          "shipping": 0.008200241925396775,
+          "refund": 0.028880710733743313,
+          "bug": 0.0017968759072300314,
+          "other": 0.9593273694652927
+        }
+      },
+      "order": {
+        "id": "4802",
+        "customer": {
+          "name": "Tom Becker",
+          "email": "tom.becker@example.net"
+        },
+        "placed_at": "2026-10-20",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-KTL-GN",
+            "name": "Gooseneck Kettle (stovetop)",
+            "qty": 1,
+            "unit_price": 129
+          },
+          {
+            "sku": "KP-FLT-100",
+            "name": "Paper Filters (100)",
+            "qty": 1,
+            "unit_price": 8
+          }
+        ],
+        "subtotal": 137,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "USPS",
+          "tracking": "9400111204802398253366",
+          "events": [
+            {
+              "date": "2026-10-21",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-25",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 137,
+        "payment": {
+          "method": "Visa •••• 7674",
+          "charges": [
+            {
+              "id": "ch_4802_1",
+              "amount": 137,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-20"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Tom is writing to say he loves his gooseneck kettle (order 4802) and the handwritten note. He isn't asking for anything.",
+        "reply": "Hi Tom,\n\nThank you for writing! We're so glad the Gooseneck Kettle is working well for you. Good pour control is exactly what we hoped you'd get from it, and it's nice to hear it looks good on your stove too.\n\nI'll pass your note along to the team. The handwritten notes are a small thing we love doing, so it means a lot that you noticed.\n\nAlso, just so you know, the kettle has a 2-year warranty against defects. If anything ever goes wrong with it, just reply to this email.\n\nEnjoy your coffee!\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "none",
+            "detail": "Positive feedback only, nothing to do. You could share it with the packing team who write the handwritten notes."
+          }
+        ],
+        "internal_note": "Simple thank-you. Order 4802 was delivered 2026-10-25 and the data shows no problems.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e24",
+      "email": {
+        "id": "e24",
+        "from_name": "Zoe Campbell",
+        "from_email": "zoe.campbell@example.com",
+        "received_at": "2026-11-03T07:50:00Z",
+        "subject": "Charged after I cancelled my subscription",
+        "body": "Hi,\n\nI cancelled my monthly beans subscription on October 29th (I have the confirmation email) but I was charged $34 again on November 1st. Please refund this charge and make sure no more are taken.\n\nZoe"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 526.7235839999921,
+        "lookup_ms": 0.023750000007566996,
+        "draft_ms": 12211.053958999997,
+        "total_ms": 12738.044374999998
+      },
+      "cost_usd": 0.0301552,
+      "created_at": "2026-11-05T11:01:11.146Z",
+      "triage": {
+        "backend": "d3",
+        "category": "billing",
+        "priority": "urgent",
+        "sentiment": "frustrated",
+        "order_id": null,
+        "confidence": 0.8836575723518806,
+        "probabilities": {
+          "billing": 0.8836575723518806,
+          "shipping": 0.00012766725525067247,
+          "refund": 0.10733424099143551,
+          "bug": 0.007362970131828164,
+          "other": 0.0015175492696050596
+        }
+      },
+      "order": {
+        "id": "4833",
+        "customer": {
+          "name": "Zoe Campbell",
+          "email": "zoe.campbell@example.com"
+        },
+        "placed_at": "2026-11-01",
+        "status": "processing",
+        "items": [
+          {
+            "sku": "KP-SUB-M",
+            "name": "Monthly Beans Subscription",
+            "qty": 1,
+            "unit_price": 34
+          }
+        ],
+        "subtotal": 34,
+        "shipping": {
+          "method": "standard",
+          "fee": 6.9,
+          "carrier": null,
+          "tracking": null,
+          "events": []
+        },
+        "total": 40.9,
+        "payment": {
+          "method": "Visa •••• 8821",
+          "charges": [
+            {
+              "id": "ch_4833_1",
+              "amount": 40.9,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-11-01"
+            }
+          ]
+        },
+        "subscription": {
+          "status": "cancelled",
+          "cancelled_at": "2026-10-29",
+          "next_billing_date": "2026-11-01",
+          "note": "Renewal charged on 2026-11-01 after cancellation (sync delay)"
+        }
+      },
+      "order_match": "by_sender",
+      "draft": {
+        "summary": "Zoe cancelled her monthly beans subscription on Oct 29 but was charged again on Nov 1. She wants a refund and no more charges.",
+        "reply": "Hi Zoe,\n\nI'm sorry about this. You're right: you cancelled your subscription on October 29th, before the November 1st billing date, so you should not have been charged. A delay in our system meant the cancellation hadn't reached billing in time, and the renewal went through anyway. That was our mistake.\n\nHere's what we're doing:\n\n- We're cancelling the renewal order (#4833) before it ships, so no beans will go out.\n- We're refunding the full charge of $40.90 to your Visa ending in 8821. That's the $34 subscription plus $6.90 standard shipping. Refunds usually show up within 5–10 business days, depending on your bank.\n- Your subscription is now cancelled in our system, so no more charges will be taken.\n\nYou don't need to do anything else. If the refund hasn't arrived after 10 business days, just reply to this email and I'll look into it right away.\n\nSorry again for the trouble.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "cancel_order",
+            "detail": "Cancel order #4833 (Monthly Beans Subscription renewal, status: processing) so it does not ship."
+          },
+          {
+            "type": "refund",
+            "detail": "Full refund of $40.90 USD (charge ch_4833_1, $34 subscription + $6.90 shipping) to Visa •••• 8821."
+          },
+          {
+            "type": "fix_bug",
+            "detail": "Subscription renewal was charged on 2026-11-01 after a cancellation on 2026-10-29 because of a sync delay. Check that the subscription stays cancelled with no future billing date, and report the sync issue."
+          }
+        ],
+        "internal_note": "The customer says she was charged $34, but the captured charge is $40.90 because shipping was included. The reply refunds the full $40.90. Make sure #4833 is cancelled before fulfilment, and confirm the subscription has no next billing date after the sync bug.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e25",
+      "email": {
+        "id": "e25",
+        "from_name": "Olivia Brooks",
+        "from_email": "olivia.brooks@example.net",
+        "received_at": "2026-11-03T06:55:00Z",
+        "subject": "Only half my order arrived",
+        "body": "Hello, I got the mug set from order #4814 but no kettle. Is the kettle coming separately or was it forgotten?\n\nOlivia"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 473.32354199999827,
+        "lookup_ms": 0.020291999986511655,
+        "draft_ms": 10878.235750000007,
+        "total_ms": 11352.307624999987
+      },
+      "cost_usd": 0.025115199999999997,
+      "created_at": "2026-11-05T11:01:14.089Z",
+      "triage": {
+        "backend": "d3",
+        "category": "refund",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4814",
+        "confidence": 0.7985797441118314,
+        "probabilities": {
+          "billing": 0.0004560824892867232,
+          "shipping": 0.18178069268493588,
+          "refund": 0.7985797441118314,
+          "bug": 0.0019087422467618422,
+          "other": 0.01727473846718416
+        }
+      },
+      "order": {
+        "id": "4814",
+        "customer": {
+          "name": "Olivia Brooks",
+          "email": "olivia.brooks@example.net"
+        },
+        "placed_at": "2026-10-27",
+        "status": "shipped",
+        "items": [
+          {
+            "sku": "KP-KTL-EL",
+            "name": "Electric Gooseneck Kettle",
+            "qty": 1,
+            "unit_price": 159
+          },
+          {
+            "sku": "KP-MUG-W",
+            "name": "Stoneware Mug Set, White (2)",
+            "qty": 1,
+            "unit_price": 42
+          }
+        ],
+        "subtotal": 201,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": null,
+          "tracking": null,
+          "events": []
+        },
+        "total": 201,
+        "payment": {
+          "method": "Visa •••• 8118",
+          "charges": [
+            {
+              "id": "ch_4814_1",
+              "amount": 201,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-27"
+            }
+          ]
+        },
+        "parcels": [
+          {
+            "items": [
+              "KP-MUG-W"
+            ],
+            "carrier": "USPS",
+            "tracking": "9400111202555842761031",
+            "status": "Delivered",
+            "date": "2026-11-01"
+          },
+          {
+            "items": [
+              "KP-KTL-EL"
+            ],
+            "carrier": "USPS",
+            "tracking": "9400111202555842761048",
+            "status": "In transit, expected 2026-11-05",
+            "date": "2026-11-02"
+          }
+        ]
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Customer received the mug set from order #4814 but not the kettle, and asks whether it is coming separately or was forgotten.",
+        "reply": "Hi Olivia,\n\nThanks for getting in touch. Good news: your kettle wasn't forgotten. Your order #4814 was sent in two parcels.\n\n- Stoneware Mug Set, White (2): delivered by USPS on November 1\n- Electric Gooseneck Kettle: shipped separately with USPS on November 2 and now on its way. USPS expects to deliver it on November 5.\n\nYou can follow the kettle here with USPS tracking number 9400111202555842761048.\n\nSorry for the confusion. We should have told you the order would arrive in two parts. If the kettle hasn't arrived a few days after November 5, or anything looks wrong when it does, just reply to this email and we'll sort it out right away.\n\nBest,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "none",
+            "detail": "No action needed. The kettle (KP-KTL-EL) is in transit with USPS 9400111202555842761048, expected 2026-11-05."
+          }
+        ],
+        "internal_note": "Triage tagged this as a refund, but it's really a shipping question about a split shipment. The kettle shipped 11-02 and is in transit. The order-level shipping field shows carrier and tracking as null, but the parcel data has both. Note: the system prompt says today is 11-03 but the environment says 11-05. If it's already 11-05, check that the kettle was delivered before sending.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e26",
+      "email": {
+        "id": "e26",
+        "from_name": "Hannah Ito",
+        "from_email": "hannah.ito@example.net",
+        "received_at": "2026-11-02T18:40:00Z",
+        "subject": "Return label for mugs",
+        "body": "Hi, I'd like to return the white mug set from order 4806, they're unused and still boxed. How do I get a return label?\n\nHannah"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1455.8628339999996,
+        "lookup_ms": 0.010500000003958121,
+        "draft_ms": 11750.170792000004,
+        "total_ms": 13206.319749999995
+      },
+      "cost_usd": 0.029323200000000004,
+      "created_at": "2026-11-05T11:01:15.411Z",
+      "triage": {
+        "backend": "d3",
+        "category": "refund",
+        "priority": "normal",
+        "sentiment": "neutral",
+        "order_id": "4806",
+        "confidence": 0.9895143372809944,
+        "probabilities": {
+          "billing": 0.001132501719312919,
+          "shipping": 0.0033432801888787587,
+          "refund": 0.9895143372809944,
+          "bug": 0.0015775091225667835,
+          "other": 0.004432371688247128
+        }
+      },
+      "order": {
+        "id": "4806",
+        "customer": {
+          "name": "Hannah Ito",
+          "email": "hannah.ito@example.net"
+        },
+        "placed_at": "2026-10-18",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-MUG-W",
+            "name": "Stoneware Mug Set, White (2)",
+            "qty": 1,
+            "unit_price": 42
+          }
+        ],
+        "subtotal": 42,
+        "shipping": {
+          "method": "standard",
+          "fee": 6.9,
+          "carrier": "USPS",
+          "tracking": "9400111204806398585105",
+          "events": [
+            {
+              "date": "2026-10-19",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-22",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 48.9,
+        "payment": {
+          "method": "Visa •••• 7822",
+          "charges": [
+            {
+              "id": "ch_4806_1",
+              "amount": 48.9,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-18"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Hannah wants a return label so she can send back an unused, still-boxed white mug set from order 4806.",
+        "reply": "Hi Hannah,\n\nThanks for getting in touch. Yes, you can return the Stoneware Mug Set (White, 2) from order 4806. It was delivered on October 22, so it's well within our 30-day return window. Unused and in the original box is exactly what we need.\n\nOne thing to know first: for returns of unused items, the return shipping is paid by the customer. A teammate will email you the return label and instructions shortly. Please send the set back in its original packaging and make sure it's well padded so it travels safely.\n\nOnce the mugs reach us, we'll refund $42.00 to your Visa ending in 7822. It usually shows up within 5–10 business days after we receive the return.\n\nIf you have any questions in the meantime, just reply to this email.\n\nWarm regards,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "send_return_label",
+            "detail": "Return label for order 4806, 1x Stoneware Mug Set, White (2) (KP-MUG-W), from Hannah Ito (hannah.ito@example.net). This is a change-of-mind return, so the customer pays return shipping."
+          },
+          {
+            "type": "refund",
+            "detail": "Once the return is received and checked: refund $42.00 (item price) to Visa •••• 7822 (charge ch_4806_1). Original shipping of $6.90 is not included unless a teammate decides otherwise."
+          }
+        ],
+        "internal_note": "Policy says the customer pays return shipping but doesn't say how. Please check whether we charge her for the label or take the cost out of the refund, and tell her the amount. The return window closes 2026-11-21 (30 days after the 10-22 delivery).",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e27",
+      "email": {
+        "id": "e27",
+        "from_name": "Pat Doyle",
+        "from_email": "pat.doyle@example.org",
+        "received_at": "2026-11-02T15:25:00Z",
+        "subject": "unsubscribe link broken",
+        "body": "The unsubscribe link at the bottom of your newsletter goes to a 404 page. Please fix and remove me from the list."
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 2058.631791000007,
+        "lookup_ms": 0.05341600000974722,
+        "draft_ms": 7502.469041999997,
+        "total_ms": 9561.664417000007
+      },
+      "cost_usd": 0.0186672,
+      "created_at": "2026-11-05T11:01:16.500Z",
+      "triage": {
+        "backend": "d3",
+        "category": "bug",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": null,
+        "confidence": 0.9516631424786485,
+        "probabilities": {
+          "billing": 0.00024884316528549374,
+          "shipping": 0.00023232789099853803,
+          "refund": 0.002419333687395141,
+          "bug": 0.9516631424786485,
+          "other": 0.0454363527776723
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "Pat says the newsletter unsubscribe link goes to a 404 page and wants us to fix it and take them off the mailing list.",
+        "reply": "Hi Pat,\n\nThanks for letting us know, and sorry about the broken link. You shouldn't have to email us just to unsubscribe.\n\nWe're taking pat.doyle@example.org off our newsletter list now. It can take a few days to clear completely, so if one more newsletter was already scheduled, it may still reach you. We've also sent the broken unsubscribe link to our team to fix.\n\nIf newsletters keep arriving after that, or they're going to a different email address, just reply here and we'll sort it out.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "forward_to_owner",
+            "detail": "Unsubscribe pat.doyle@example.org from all newsletter/marketing lists by hand, and confirm it worked."
+          },
+          {
+            "type": "fix_bug",
+            "detail": "The unsubscribe link in the newsletter footer goes to a 404 page. Fix the link or the landing page and test it. Other subscribers are probably hitting the same problem."
+          }
+        ],
+        "internal_note": "No order on file. Unsubscribe Pat by hand before sending, since the reply says we're doing it. A broken unsubscribe link may be a CAN-SPAM compliance risk, so it should be fixed quickly.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e28",
+      "email": {
+        "id": "e28",
+        "from_name": "Bree Cole",
+        "from_email": "bree@brewwithbree.example",
+        "received_at": "2026-11-02T12:05:00Z",
+        "subject": "Collab idea 🎥",
+        "body": "Hey Kettle & Pine team! I'm a coffee creator (48k on Instagram, 120k on TikTok) and I'd love to feature your gooseneck kettle in a pour-over series. Open to a gifted collab or paid partnership. Let me know!\n\nBree"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 3976.801958000011,
+        "lookup_ms": 0.0272910000057891,
+        "draft_ms": 8183.358208999998,
+        "total_ms": 12160.608624999993
+      },
+      "cost_usd": 0.018483199999999998,
+      "created_at": "2026-11-05T11:01:16.518Z",
+      "triage": {
+        "backend": "d3",
+        "category": "other",
+        "priority": "low",
+        "sentiment": "neutral",
+        "order_id": null,
+        "confidence": 0.9979469748042743,
+        "probabilities": {
+          "billing": 0.0003588954926449103,
+          "shipping": 0.00038310216555585637,
+          "refund": 0.000621645847105045,
+          "bug": 0.000689381690419941,
+          "other": 0.9979469748042743
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "An influencer (48k Instagram, 120k TikTok) wants to partner with us, either gifted or paid, to feature our gooseneck kettle in a pour-over series.",
+        "reply": "Hi Bree,\n\nThanks so much for reaching out, and for thinking of our gooseneck kettle for your pour-over series. That sounds like a lot of fun!\n\nSupport doesn't handle partnerships, so I've passed your message to the teammate who looks after collaborations. They'll get back to you about next steps. To help them, could you reply with your Instagram and TikTok handles? A media kit or your usual rates would help too, if you have them.\n\nThanks again for thinking of us!\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "forward_to_owner",
+            "detail": "Forward to whoever handles marketing/influencer partnerships: Bree Cole (bree@brewwithbree.example), coffee creator, says 48k IG / 120k TikTok, wants a gifted or paid collab featuring the gooseneck kettle in a pour-over series."
+          }
+        ],
+        "internal_note": "This is a partnership request, not a support issue. No order. Follower counts are her own claims and haven't been checked. The reply makes no promise of free product or payment, so marketing should decide.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e29",
+      "email": {
+        "id": "e29",
+        "from_name": "Isabel Torres",
+        "from_email": "isabel.torres@example.com",
+        "received_at": "2026-11-03T07:18:00Z",
+        "subject": "Paid for express, still waiting",
+        "body": "Hi, I paid $12.90 for express shipping on order 4827 five days ago and it's still not here. Express was supposed to be 1-3 days. Can you check what's going on?\n\nIsabel"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1381.570332999996,
+        "lookup_ms": 0.017999999996391125,
+        "draft_ms": 18298.17079100001,
+        "total_ms": 19680.097125
+      },
+      "cost_usd": 0.040815199999999996,
+      "created_at": "2026-11-05T11:01:23.884Z",
+      "triage": {
+        "backend": "d3",
+        "category": "shipping",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4827",
+        "confidence": 0.9865082030635409,
+        "probabilities": {
+          "billing": 0.007472705641674648,
+          "shipping": 0.9865082030635409,
+          "refund": 0.0050072967005924856,
+          "bug": 0.0004661785837275112,
+          "other": 0.0005456160104644535
+        }
+      },
+      "order": {
+        "id": "4827",
+        "customer": {
+          "name": "Isabel Torres",
+          "email": "isabel.torres@example.com"
+        },
+        "placed_at": "2026-10-28",
+        "status": "shipped",
+        "items": [
+          {
+            "sku": "KP-SCL-01",
+            "name": "Digital Coffee Scale",
+            "qty": 1,
+            "unit_price": 49
+          }
+        ],
+        "subtotal": 49,
+        "shipping": {
+          "method": "express",
+          "fee": 12.9,
+          "carrier": "USPS",
+          "tracking": "9400111204827400326738",
+          "events": [
+            {
+              "date": "2026-10-29",
+              "status": "Shipped (USPS Ground Advantage)",
+              "location": "Portland, OR"
+            }
+          ]
+        },
+        "total": 61.9,
+        "payment": {
+          "method": "Visa •••• 8599",
+          "charges": [
+            {
+              "id": "ch_4827_1",
+              "amount": 61.9,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-28"
+            }
+          ]
+        },
+        "fulfilment_note": "Shipped with standard USPS label in error; express was paid"
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Isabel paid $12.90 for express shipping on order 4827, but it still hasn't arrived after five days and she wants to know why.",
+        "reply": "Hi Isabel,\n\nThanks for getting in touch, and I'm sorry about this. I checked order 4827 and the mistake is ours. You paid for express, but our team shipped your Digital Coffee Scale with a standard USPS Ground Advantage label by error. That's why it's taking longer than the 1–3 days you paid for.\n\nHere's what we're doing about it:\n\n- We're refunding the $12.90 express fee to your Visa ending in 8599. Refunds usually show up within 5–10 business days.\n- Your parcel left Portland on October 29 by USPS. Tracking number: 9400111204827400326738. Standard shipping usually takes 3–7 business days, so it should reach you soon.\n\nThe tracking hasn't updated since it shipped, so we're keeping an eye on it. If it still hasn't moved by November 5, we'll open a trace with USPS. Then you can choose between a free reshipment or a full refund. You don't need to do anything for now, but if the scale turns up before then, just reply and let us know.\n\nSorry again for the delay, and thank you for your patience.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "partial_refund",
+            "detail": "Refund the $12.90 express shipping fee on order 4827 to Visa •••• 8599 (charge ch_4827_1). It was shipped with a standard USPS label by mistake."
+          },
+          {
+            "type": "fix_bug",
+            "detail": "Fulfilment error: order 4827 had express paid but got a standard USPS Ground Advantage label. Check why the wrong label was picked."
+          },
+          {
+            "type": "none",
+            "detail": "Watch tracking 9400111204827400326738 (last update Oct 29, Portland). If it hasn't moved by Nov 5, open a USPS trace and offer a reship or a refund."
+          }
+        ],
+        "internal_note": "The policy doesn't cover refunding shipping fees when we ship with the wrong service. I offered the full $12.90 express fee because she got the standard service, which would have cost $6.90 since her subtotal of $49 is under $75. If we only refund the $6.00 difference, change the reply before sending. Also, the env date (Nov 5) doesn't match the system date (Nov 3). If it's really Nov 5, tracking has been stuck 7 days, so open the trace now and change the reply to offer a reship or refund.",
+        "needs_attention": true
+      }
+    },
+    {
+      "id": "e30",
+      "email": {
+        "id": "e30",
+        "from_name": "David Kim",
+        "from_email": "david.kim@example.net",
+        "received_at": "2026-11-02T10:30:00Z",
+        "subject": "Receipt copy",
+        "body": "Hello, could you email me a copy of the receipt for order 4819? I need it for a warranty registration. Thanks!"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1585.4991659999941,
+        "lookup_ms": 0.010291999991750345,
+        "draft_ms": 8263.106208000012,
+        "total_ms": 9848.802416000006
+      },
+      "cost_usd": 0.023699199999999997,
+      "created_at": "2026-11-05T11:01:25.441Z",
+      "triage": {
+        "backend": "d3",
+        "category": "billing",
+        "priority": "normal",
+        "sentiment": "neutral",
+        "order_id": "4819",
+        "confidence": 0.9817498785199149,
+        "probabilities": {
+          "billing": 0.9817498785199149,
+          "shipping": 0.0027466623194516314,
+          "refund": 0.005882474511640968,
+          "bug": 0.002889558865368941,
+          "other": 0.006731425783623581
+        }
+      },
+      "order": {
+        "id": "4819",
+        "customer": {
+          "name": "David Kim",
+          "email": "david.kim@example.net"
+        },
+        "placed_at": "2026-10-09",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-SCL-01",
+            "name": "Digital Coffee Scale",
+            "qty": 1,
+            "unit_price": 49
+          }
+        ],
+        "subtotal": 49,
+        "shipping": {
+          "method": "standard",
+          "fee": 6.9,
+          "carrier": "USPS",
+          "tracking": "9400111204819399663259",
+          "events": [
+            {
+              "date": "2026-10-10",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-14",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 55.9,
+        "payment": {
+          "method": "Visa •••• 8303",
+          "charges": [
+            {
+              "id": "ch_4819_1",
+              "amount": 55.9,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-09"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Customer wants a copy of the receipt for order 4819 (Digital Coffee Scale) so he can register the warranty.",
+        "reply": "Hi David,\n\nThanks for getting in touch. Yes, we can send that. A copy of the receipt for order 4819 will arrive at this email address (david.kim@example.net) shortly.\n\nFor your records, here's what it covers:\n- Order 4819, placed 9 October 2026\n- 1 × Digital Coffee Scale: $49.00\n- Standard shipping (USPS): $6.90\n- Total: $55.90, paid by Visa ending in 8303\n- Delivered 14 October 2026\n\nYou can also download a receipt yourself at any time from your order page.\n\nIf you need anything else for the warranty registration, just reply to this email.\n\nBest,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "send_invoice",
+            "detail": "Email a receipt copy for order 4819 (Digital Coffee Scale x1 $49.00 + standard shipping $6.90 = $55.90 USD, Visa •••• 8303, charge ch_4819_1 captured 2026-10-09) to david.kim@example.net."
+          }
+        ],
+        "internal_note": "Simple receipt request. The order data matches the customer. The scale isn't covered by our 2-year warranty (that's grinders and kettles only), so the registration is probably with the manufacturer. The reply doesn't promise any warranty from us.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e31",
+      "email": {
+        "id": "e31",
+        "from_name": "Priya Nair",
+        "from_email": "priya.nair@example.com",
+        "received_at": "2026-11-03T05:40:00Z",
+        "subject": "Grinder stopped working",
+        "body": "Hi,\n\nMy Burr Grinder Pro (order #4801) worked great for three weeks and now the motor hums but the burrs don't turn. Nothing stuck inside as far as I can see. Is this covered?\n\nPriya"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 2936.8701250000013,
+        "lookup_ms": 0.055000000007566996,
+        "draft_ms": 11680.336750000002,
+        "total_ms": 14617.576125000007
+      },
+      "cost_usd": 0.0295152,
+      "created_at": "2026-11-05T11:01:26.062Z",
+      "triage": {
+        "backend": "d3",
+        "category": "refund",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4801",
+        "confidence": 0.9447152195338825,
+        "probabilities": {
+          "billing": 0.0004549579256137934,
+          "shipping": 0.0005180866670890748,
+          "refund": 0.9447152195338825,
+          "bug": 0.0030884382427281754,
+          "other": 0.05122329763068644
+        }
+      },
+      "order": {
+        "id": "4801",
+        "customer": {
+          "name": "Priya Nair",
+          "email": "priya.nair@example.com"
+        },
+        "placed_at": "2026-10-04",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-GRD-PRO",
+            "name": "Burr Grinder Pro",
+            "qty": 1,
+            "unit_price": 189
+          }
+        ],
+        "subtotal": 189,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "USPS",
+          "tracking": "9400111204801398170431",
+          "events": [
+            {
+              "date": "2026-10-05",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-10",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 189,
+        "payment": {
+          "method": "Visa •••• 7637",
+          "charges": [
+            {
+              "id": "ch_4801_1",
+              "amount": 189,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-04"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Priya's Burr Grinder Pro (order #4801) stopped working after three weeks: the motor hums but the burrs don't turn. She's asking if it's covered.",
+        "reply": "Hi Priya,\n\nI'm sorry your Burr Grinder Pro has stopped working. The motor humming while the burrs stay still is a fault, and yes, it's fully covered.\n\nYour order was delivered on October 10, so you're still within our 30-day window. The grinder also has a 2-year warranty against defects. Because the problem is on our side, we'll cover all the costs. You can choose:\n\n1. A free replacement Burr Grinder Pro, or\n2. A full refund of $189 to your Visa ending in 7637.\n\nJust reply and tell me which you'd like. As soon as I hear back, we'll get it started. A replacement ships from Portland within 1–2 business days, and we'll pay for sending back the faulty grinder. If you pick the refund, it goes back to your card within 5–10 business days after we receive the grinder.\n\nSorry again for the trouble, and thanks for telling us.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "none",
+            "detail": "Waiting for Priya to choose. If she wants a replacement: send 1x Burr Grinder Pro (KP-GRD-PRO) free, plus a prepaid return label for the faulty unit. If she wants a refund: send a prepaid return label, then refund $189 to Visa ••••7637 (charge ch_4801_1) once the grinder is received."
+          }
+        ],
+        "internal_note": "Delivered 2026-10-10, so she's inside the 30-day window and the 2-year warranty. It's a defect, so we cover everything. Triage tagged this as a refund, but she only asked if it's covered. I offered both options and didn't ask for a photo, since policy only asks for photos of damaged items. Please check that we want the faulty unit sent back.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e32",
+      "email": {
+        "id": "e32",
+        "from_name": "Carlos Romero",
+        "from_email": "carlos.romero@example.es",
+        "received_at": "2026-11-03T01:15:00Z",
+        "subject": "Devolución pedido 4822",
+        "body": "Hola,\n\nQuiero devolver el molinillo manual del pedido 4822. Es más pequeño de lo que esperaba y no lo he usado. ¿Cómo hago la devolución?\n\nGracias,\nCarlos"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 2154.74570900001,
+        "lookup_ms": 0.007417000000714324,
+        "draft_ms": 13087.789458999992,
+        "total_ms": 15242.685375000001
+      },
+      "cost_usd": 0.0338192,
+      "created_at": "2026-11-05T11:01:28.617Z",
+      "triage": {
+        "backend": "d3",
+        "category": "refund",
+        "priority": "normal",
+        "sentiment": "neutral",
+        "order_id": "4822",
+        "confidence": 0.9954502422732278,
+        "probabilities": {
+          "billing": 0.00029615101018402537,
+          "shipping": 0.0004323390857324506,
+          "refund": 0.9954502422732278,
+          "bug": 0.0005011583181470036,
+          "other": 0.003320109312708804
+        }
+      },
+      "order": {
+        "id": "4822",
+        "customer": {
+          "name": "Carlos Romero",
+          "email": "carlos.romero@example.es"
+        },
+        "placed_at": "2026-10-20",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-GRD-HND",
+            "name": "Hand Grinder",
+            "qty": 1,
+            "unit_price": 79
+          }
+        ],
+        "subtotal": 79,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "USPS",
+          "tracking": "9400111204822399912064",
+          "events": [
+            {
+              "date": "2026-10-21",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-24",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 79,
+        "payment": {
+          "method": "Visa •••• 8414",
+          "charges": [
+            {
+              "id": "ch_4822_1",
+              "amount": 79,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-20"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Carlos wants to return the unused Hand Grinder from order 4822 because it's smaller than he expected, and is asking how to do it.",
+        "reply": "Hola Carlos:\n\nGracias por escribirnos. Sentimos que el molinillo no sea lo que esperabas. Sin problema: puedes devolverlo.\n\nTu pedido 4822 se entregó el 24 de octubre de 2026, así que estás dentro de nuestro plazo de devolución de 30 días. Tienes hasta el 23 de noviembre de 2026. Para aceptar la devolución, el molinillo tiene que estar sin usar y en su embalaje original. Ten en cuenta que, al ser una devolución por cambio de opinión, los gastos del envío de vuelta corren por tu cuenta.\n\nLos pasos son estos:\n1. Guarda el molinillo en su caja original, bien protegido.\n2. En breve te enviaremos por correo la dirección de devolución y las instrucciones para el envío.\n3. Cuando lo recibamos y lo revisemos, te devolveremos 79,00 USD a tu Visa terminada en 8414. El reembolso suele verse en tu cuenta en un plazo de 5 a 10 días hábiles.\n\nSi tienes cualquier duda, responde a este correo y te ayudamos.\n\nUn saludo,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "send_return_label",
+            "detail": "Send Carlos the return address and instructions for 1x Hand Grinder (KP-GRD-HND), order 4822. This is a change-of-mind return, so the customer pays return shipping. Do not send a prepaid label at our cost."
+          },
+          {
+            "type": "refund",
+            "detail": "When the grinder comes back unused in its original packaging, refund $79.00 to Visa •••• 8414 (charge ch_4822_1)."
+          }
+        ],
+        "internal_note": "Delivered 2026-10-24, so the return window ends 2026-11-23. The customer pays return shipping (change of mind). The order got free shipping and the $79 subtotal was over the $75 threshold. The policy says nothing about taking that off the refund, so the reply promises the full $79.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e33",
+      "email": {
+        "id": "e33",
+        "from_name": "Diane Ford",
+        "from_email": "diane.ford@example.com",
+        "received_at": "2026-11-03T08:20:00Z",
+        "subject": "Can't add anything to cart",
+        "body": "Since this morning, clicking 'Add to cart' on any product does nothing. Tried two browsers and my husband's laptop. I wanted to order beans today, please fix!"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 3840.344584000006,
+        "lookup_ms": 0.020791999995708466,
+        "draft_ms": 9075.425292,
+        "total_ms": 12916.024832999989
+      },
+      "cost_usd": 0.0215872,
+      "created_at": "2026-11-05T11:01:28.679Z",
+      "triage": {
+        "backend": "d3",
+        "category": "bug",
+        "priority": "urgent",
+        "sentiment": "frustrated",
+        "order_id": null,
+        "confidence": 0.9939837939829738,
+        "probabilities": {
+          "billing": 0.00011922527323352883,
+          "shipping": 0.00013939937403432596,
+          "refund": 0.0006377942156210819,
+          "bug": 0.9939837939829738,
+          "other": 0.005119787154137311
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "Diane says \"Add to cart\" hasn't worked on any product since this morning, on several browsers and devices, and she wants to order beans today.",
+        "reply": "Hi Diane,\n\nI'm sorry about this, and thank you for telling us. You've already tried two browsers and a second laptop, so this looks like a problem on our side, not your setup. I've sent it to our team to fix as a priority.\n\nTo help us find the cause faster, could you tell us:\n- which products or pages you tried\n- which browsers you used (and whether it was a computer or a phone)\n- whether you saw any error message, or nothing happened at all\n\nA teammate will email you as soon as the cart is working again. If you'd like to place your bean order before then, just reply with the beans you want, the bag size, the grind and how many bags. Please include your shipping address too. A teammate will follow up about getting the order set up for you.\n\nThanks for your patience, and sorry again for the hassle.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "fix_bug",
+            "detail": "Site-wide bug: 'Add to cart' does nothing on any product page since the morning of 2026-11-03. The customer reproduced it on two browsers and two devices. Check the cart and checkout frontend/backend for a recent deploy or JS error. Urgent because this likely blocks all sales."
+          },
+          {
+            "type": "forward_to_owner",
+            "detail": "If Diane replies with her bean order before the fix is live, decide how to take the order manually (e.g. a payment link or invoice), then follow up with her."
+          }
+        ],
+        "internal_note": "This probably affects every customer, not just Diane, so check whether add-to-cart is broken site-wide right away. The policy doesn't cover manual phone or email orders, so the reply only says a teammate will follow up and promises nothing specific.",
+        "needs_attention": true
+      }
+    },
+    {
+      "id": "e34",
+      "email": {
+        "id": "e34",
+        "from_name": "Sophie Laurent",
+        "from_email": "sophie.laurent@example.com",
+        "received_at": "2026-11-03T06:30:00Z",
+        "subject": "Tracking link doesn't work",
+        "body": "Hi, the tracking link in my shipping email for order 4816 gives an error on the UPS site. Can you tell me where my kettle is?"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1215.7264589999977,
+        "lookup_ms": 0.012957999992067926,
+        "draft_ms": 10515.716792000007,
+        "total_ms": 11731.688624999995
+      },
+      "cost_usd": 0.0289272,
+      "created_at": "2026-11-05T11:01:35.290Z",
+      "triage": {
+        "backend": "d3",
+        "category": "shipping",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4816",
+        "confidence": 0.9899894369219758,
+        "probabilities": {
+          "billing": 0.0003044407247413651,
+          "shipping": 0.9899894369219758,
+          "refund": 0.004081335562776117,
+          "bug": 0.003919274233348694,
+          "other": 0.0017055125571580454
+        }
+      },
+      "order": {
+        "id": "4816",
+        "customer": {
+          "name": "Sophie Laurent",
+          "email": "sophie.laurent@example.com"
+        },
+        "placed_at": "2026-10-29",
+        "status": "shipped",
+        "items": [
+          {
+            "sku": "KP-KTL-GN",
+            "name": "Gooseneck Kettle (stovetop)",
+            "qty": 1,
+            "unit_price": 129
+          }
+        ],
+        "subtotal": 129,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "UPS",
+          "tracking": "1ZKP48164144548016",
+          "events": [
+            {
+              "date": "2026-10-30",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-11-02",
+              "status": "In transit",
+              "location": "Columbus, OH"
+            }
+          ]
+        },
+        "total": 129,
+        "payment": {
+          "method": "Visa •••• 8192",
+          "charges": [
+            {
+              "id": "ch_4816_1",
+              "amount": 129,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-29"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Sophie's UPS tracking link for order 4816 gives an error, and she wants to know where her kettle is.",
+        "reply": "Hi Sophie,\n\nSorry the tracking link isn't working. Here's where your kettle is.\n\nYour Gooseneck Kettle (order 4816) left our Portland workshop on October 30. The latest update from UPS, on November 2, shows it in transit in Columbus, Ohio. It's moving as expected.\n\nYour tracking number is 1ZKP48164144548016. You can enter it directly on ups.com instead of using the link in the email.\n\nYour order is on standard shipping, which takes 3–7 business days from when it ships. That means it should reach you by around November 10. If tracking stops updating for 7 days or more, just reply here. We'll open a trace with UPS and send you a new kettle or refund you, whichever you prefer.\n\nWe're also looking into why the link in the shipping email gave you an error.\n\nWarm regards,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "fix_bug",
+            "detail": "Tracking link in the shipping confirmation email for order 4816 (UPS 1ZKP48164144548016) shows an error on the UPS site. Check how UPS tracking URLs are built in shipping emails."
+          }
+        ],
+        "internal_note": "The order's shipping method is 'standard' with UPS as the carrier, but policy says standard ships by USPS. Please check that the carrier and tracking number are right, since a wrong carrier or number could also explain the broken link. The tracking number starts with '1ZKP', so check that it works on ups.com before sending.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e35",
+      "email": {
+        "id": "e35",
+        "from_name": "Sean O'Brien",
+        "from_email": "sean.obrien@example.net",
+        "received_at": "2026-11-02T20:50:00Z",
+        "subject": "Price dropped right after I bought",
+        "body": "Hey, I bought the gooseneck kettle for $129 last week (order 4828) and now it's $109 on your site. Any chance of getting the difference back?"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1352.0898330000055,
+        "lookup_ms": 0.015166999990469776,
+        "draft_ms": 6800.303458000009,
+        "total_ms": 8152.817041999995
+      },
+      "cost_usd": 0.0212312,
+      "created_at": "2026-11-05T11:01:40.679Z",
+      "triage": {
+        "backend": "d3",
+        "category": "billing",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4828",
+        "confidence": 0.7555441998711319,
+        "probabilities": {
+          "billing": 0.7555441998711319,
+          "shipping": 0.0005465700346590792,
+          "refund": 0.197208123820846,
+          "bug": 0.027658119680131106,
+          "other": 0.019042986593231965
+        }
+      },
+      "order": {
+        "id": "4828",
+        "customer": {
+          "name": "Sean O'Brien",
+          "email": "sean.obrien@example.net"
+        },
+        "placed_at": "2026-10-27",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-KTL-GN",
+            "name": "Gooseneck Kettle (stovetop)",
+            "qty": 1,
+            "unit_price": 129
+          }
+        ],
+        "subtotal": 129,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "USPS",
+          "tracking": "9400111204828400409673",
+          "events": [
+            {
+              "date": "2026-10-28",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-31",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 129,
+        "payment": {
+          "method": "Visa •••• 8636",
+          "charges": [
+            {
+              "id": "ch_4828_1",
+              "amount": 129,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-27"
+            }
+          ]
+        },
+        "current_price": {
+          "KP-KTL-GN": 109
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Customer wants the $20 back after the gooseneck kettle he bought on order 4828 dropped from $129 to $109.",
+        "reply": "Hi Sean,\n\nThanks for letting us know, and good catch! You bought the Gooseneck Kettle (stovetop) for $129 on October 27, and it's now $109. That's within our 14-day price drop window, so we're refunding the $20 difference.\n\nThe $20 will go back to your Visa ending in 8636. It usually shows up within 5–10 business days, depending on your bank.\n\nI hope you're enjoying the kettle!\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "partial_refund",
+            "detail": "Refund $20.00 USD (price drop $129 → $109 on KP-KTL-GN) for order 4828 to Visa •••• 8636, charge ch_4828_1."
+          }
+        ],
+        "internal_note": "Purchase on 2026-10-27 is within the 14-day window. Before refunding, check that order 4828 hasn't already had a price-drop adjustment, since it's limited to once per order.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e36",
+      "email": {
+        "id": "e36",
+        "from_name": "Lucy Grant",
+        "from_email": "lucy.grant@example.com",
+        "received_at": "2026-11-02T16:00:00Z",
+        "subject": "Gift cards?",
+        "body": "Do you sell gift cards? My brother is a coffee nerd and his birthday is next week."
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1986.7378330000065,
+        "lookup_ms": 0.011375000001862645,
+        "draft_ms": 8612.694416999992,
+        "total_ms": 10599.622541999997
+      },
+      "cost_usd": 0.0210112,
+      "created_at": "2026-11-05T11:01:41.595Z",
+      "triage": {
+        "backend": "d3",
+        "category": "other",
+        "priority": "low",
+        "sentiment": "neutral",
+        "order_id": null,
+        "confidence": 0.9316640627490533,
+        "probabilities": {
+          "billing": 0.0382002262191646,
+          "shipping": 0.0014884484908662583,
+          "refund": 0.003691851679085993,
+          "bug": 0.024955410861829844,
+          "other": 0.9316640627490533
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "Lucy wants to know if we sell gift cards for her brother's birthday next week.",
+        "reply": "Hi Lucy,\n\nThanks for getting in touch, and what a lovely gift idea for a coffee nerd!\n\nI want to give you the right answer on gift cards, so I've asked a teammate to confirm what we can offer. They'll get back to you as soon as possible.\n\nIf you'd like to send him something from the shop instead, here's how the timing works for next week. Orders leave our Portland workshop within 1–2 business days. After that:\n- Express (UPS) takes 1–3 business days and costs $12.90.\n- Standard (USPS) takes 3–7 business days. It costs $6.90, or it's free on US orders of $75 or more before tax.\n\nIf the birthday is early next week, express is the safer choice.\n\nHappy to help you choose something too. Just tell me what he already brews with.\n\nWarm wishes,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "forward_to_owner",
+            "detail": "Customer asks whether we sell gift cards (gift for brother's birthday next week). Policy doesn't cover gift cards, so please confirm availability/how to buy and reply to Lucy quickly because of the deadline."
+          }
+        ],
+        "internal_note": "Our policy doesn't mention gift cards, so I didn't say yes or no. She needs an answer soon because the birthday is next week. Email received 2026-11-02.",
+        "needs_attention": true
+      }
+    },
+    {
+      "id": "e37",
+      "email": {
+        "id": "e37",
+        "from_name": "Kim Nguyen",
+        "from_email": "kim.nguyen@example.com",
+        "received_at": "2026-11-03T04:05:00Z",
+        "subject": "Missing beans in my order",
+        "body": "Hi, order 4813 arrived but the Ethiopia beans weren't in the box. The dripper and filters were there. Can you send the beans?\n\nKim"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1621.0012920000008,
+        "lookup_ms": 0.016457999998237938,
+        "draft_ms": 8366.257750000004,
+        "total_ms": 9987.688375000012
+      },
+      "cost_usd": 0.0254952,
+      "created_at": "2026-11-05T11:01:43.564Z",
+      "triage": {
+        "backend": "d3",
+        "category": "refund",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4813",
+        "confidence": 0.9902410660340962,
+        "probabilities": {
+          "billing": 0.00014033711323528279,
+          "shipping": 0.007492859527359292,
+          "refund": 0.9902410660340962,
+          "bug": 0.0006007678991367494,
+          "other": 0.0015249694261724716
+        }
+      },
+      "order": {
+        "id": "4813",
+        "customer": {
+          "name": "Kim Nguyen",
+          "email": "kim.nguyen@example.com"
+        },
+        "placed_at": "2026-10-25",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-DRP-02",
+            "name": "Ceramic Dripper",
+            "qty": 1,
+            "unit_price": 32
+          },
+          {
+            "sku": "KP-FLT-100",
+            "name": "Paper Filters (100)",
+            "qty": 1,
+            "unit_price": 8
+          },
+          {
+            "sku": "KP-BN-ETH",
+            "name": "Ethiopia Guji Beans 250 g",
+            "qty": 1,
+            "unit_price": 19
+          }
+        ],
+        "subtotal": 59,
+        "shipping": {
+          "method": "standard",
+          "fee": 6.9,
+          "carrier": "USPS",
+          "tracking": "9400111204813399165650",
+          "events": [
+            {
+              "date": "2026-10-26",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-30",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 65.9,
+        "payment": {
+          "method": "Visa •••• 8081",
+          "charges": [
+            {
+              "id": "ch_4813_1",
+              "amount": 65.9,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-25"
+            }
+          ]
+        },
+        "packed_weight_note": "Package weight at delivery 0.9 lb, expected 1.3 lb"
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Kim's order 4813 arrived without the Ethiopia Guji beans, and she wants them sent.",
+        "reply": "Hi Kim,\n\nI'm sorry the Ethiopia beans weren't in your box. Our records back you up: the parcel weighed 0.9 lb when it was delivered, but it should have weighed 1.3 lb. That points to the beans being left out when we packed your order. That's our mistake, and there's nothing you need to do.\n\nWe're sending you a new bag of Ethiopia Guji Beans (250 g) at no cost, to the same address as order 4813. It will ship from Portland within 1–2 business days and should reach you 3–7 business days after that. We'll email you the tracking number once it's on its way.\n\nIf you'd rather have a refund for the beans than a new bag, just reply and let us know. We'll refund $19.00 to your Visa card instead.\n\nEnjoy the new dripper, and sorry again for the hassle.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "send_replacement",
+            "detail": "Ship 1x Ethiopia Guji Beans 250 g (KP-BN-ETH) free to the address on order 4813, standard USPS, no charge. Send tracking to the customer."
+          }
+        ],
+        "internal_note": "The packed-weight note backs up the claim: 0.9 lb delivered vs 1.3 lb expected. Kim asked for the beans to be sent, so this is a replacement, not the refund the triage suggested. If she replies asking for a refund instead, cancel the reship and refund $19 to Visa 8081.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e38",
+      "email": {
+        "id": "e38",
+        "from_name": "Henry Clark",
+        "from_email": "henry.clark@example.org",
+        "received_at": "2026-11-03T08:47:00Z",
+        "subject": "Pick up instead of shipping?",
+        "body": "I live 10 minutes from your workshop. Could I pick up my order (4834) instead of waiting for delivery?\n\nHenry"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 2928.0929999999935,
+        "lookup_ms": 0.023874999998952262,
+        "draft_ms": 9394.530332999988,
+        "total_ms": 12322.984916000001
+      },
+      "cost_usd": 0.0225712,
+      "created_at": "2026-11-05T11:01:43.860Z",
+      "triage": {
+        "backend": "d3",
+        "category": "shipping",
+        "priority": "low",
+        "sentiment": "neutral",
+        "order_id": "4834",
+        "confidence": 0.9929365712506057,
+        "probabilities": {
+          "billing": 0.0017615905147873314,
+          "shipping": 0.9929365712506057,
+          "refund": 0.0008577416471706838,
+          "bug": 0.0004091330710396759,
+          "other": 0.004034963516396533
+        }
+      },
+      "order": {
+        "id": "4834",
+        "customer": {
+          "name": "Henry Clark",
+          "email": "henry.clark@example.org"
+        },
+        "placed_at": "2026-11-02",
+        "status": "processing",
+        "items": [
+          {
+            "sku": "KP-KTL-EL",
+            "name": "Electric Gooseneck Kettle",
+            "qty": 1,
+            "unit_price": 159
+          }
+        ],
+        "subtotal": 159,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": null,
+          "tracking": null,
+          "events": []
+        },
+        "total": 159,
+        "payment": {
+          "method": "Visa •••• 8858",
+          "charges": [
+            {
+              "id": "ch_4834_1",
+              "amount": 159,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-11-02"
+            }
+          ]
+        },
+        "shipping_address_city": "Portland, OR"
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Henry wants to pick up order 4834 (still processing) at the Portland workshop instead of having it shipped.",
+        "reply": "Hi Henry,\n\nYes, you can. Your order 4834 (Electric Gooseneck Kettle) is still processing and hasn't shipped, so we can switch it to local pickup at our Portland workshop.\n\nI've asked the team to hold it so it doesn't ship. A teammate will email you when it's ready to collect, with the workshop address and pickup times. Your order already had free shipping, so the $159 total stays the same.\n\nSee you soon!\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "forward_to_owner",
+            "detail": "Switch order 4834 from standard shipping to local pickup at the Portland workshop. Hold the shipment now, then email Henry (henry.clark@example.org) when it's ready, with the workshop address and pickup hours."
+          }
+        ],
+        "internal_note": "Order 4834 is still 'processing' with no carrier or tracking, so pickup is allowed under policy. Hold it right away so it doesn't go out with the 1–2 day dispatch. Shipping was free, so there's no fee to refund. The policy doesn't list the workshop address or hours, so the reply leaves them out.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e39",
+      "email": {
+        "id": "e39",
+        "from_name": "Emma Rossi",
+        "from_email": "emma.rossi@example.it",
+        "received_at": "2026-11-02T08:15:00Z",
+        "subject": "Charged in euros?",
+        "body": "Hello, my bank statement shows the payment for order 4825 in euros (€71.32) and with a foreign transaction fee. I thought prices were in dollars? Why was I charged differently?"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1452.172499999986,
+        "lookup_ms": 0.01883399998769164,
+        "draft_ms": 11429.034583,
+        "total_ms": 12881.606500000009
+      },
+      "cost_usd": 0.0267112,
+      "created_at": "2026-11-05T11:01:47.022Z",
+      "triage": {
+        "backend": "d3",
+        "category": "billing",
+        "priority": "low",
+        "sentiment": "frustrated",
+        "order_id": "4825",
+        "confidence": 0.9849088947264504,
+        "probabilities": {
+          "billing": 0.9849088947264504,
+          "shipping": 0.00046727204635883747,
+          "refund": 0.0001751134287704338,
+          "bug": 0.00846733539084685,
+          "other": 0.005981384407573468
+        }
+      },
+      "order": {
+        "id": "4825",
+        "customer": {
+          "name": "Emma Rossi",
+          "email": "emma.rossi@example.it"
+        },
+        "placed_at": "2026-10-28",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-DRP-02",
+            "name": "Ceramic Dripper",
+            "qty": 1,
+            "unit_price": 32
+          },
+          {
+            "sku": "KP-BN-COL",
+            "name": "Colombia Huila Beans 250 g",
+            "qty": 2,
+            "unit_price": 18
+          }
+        ],
+        "subtotal": 68,
+        "shipping": {
+          "method": "standard",
+          "fee": 6.9,
+          "carrier": "USPS",
+          "tracking": "9400111204825400160868",
+          "events": [
+            {
+              "date": "2026-10-29",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-11-02",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 74.9,
+        "payment": {
+          "method": "Visa •••• 8525",
+          "charges": [
+            {
+              "id": "ch_4825_1",
+              "amount": 74.9,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-28"
+            }
+          ]
+        },
+        "card_country": "IT"
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Emma wants to know why her bank statement shows order 4825 in euros (€71.32) with a foreign transaction fee, when our prices are in USD.",
+        "reply": "Hi Emma,\n\nThanks for getting in touch. I can see why the euro amount was confusing.\n\nOur prices are in US dollars, and that's how we charged you. Our records show one charge for order 4825 on 28 October: $74.90 USD on your Visa ending 8525. That's $68.00 for the items plus $6.90 for standard shipping.\n\nYour card was issued in Italy, so your bank converted the dollar charge into euros. The €71.32 on your statement is your bank's conversion. The exchange rate and the foreign transaction fee are set by your bank, not by us, so we can't see or change them. If you want to know how the fee or rate was worked out, your bank can explain it. Some cards don't charge foreign transaction fees, which could help with future orders.\n\nI'm glad to see your Ceramic Dripper and Colombia Huila beans were delivered on 2 November. Enjoy them!\n\nIf anything else on the charge looks wrong, just reply here and I'll take a look.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "none",
+            "detail": "No action needed. There was a single USD charge of $74.90, captured as expected. The euro amount and fee come from the customer's Italian bank."
+          }
+        ],
+        "internal_note": "Charge ch_4825_1 is $74.90 USD, captured, with no duplicate. Card country is IT, so the bank did the conversion and charged the fee. Our policy doesn't cover bank fees, so the reply doesn't offer to refund them.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e40",
+      "email": {
+        "id": "e40",
+        "from_name": "Ava Thompson",
+        "from_email": "ava.thompson@example.com",
+        "received_at": "2026-11-03T08:10:00Z",
+        "subject": "No confirmation email",
+        "body": "I placed an order this morning (#4829 I think, from the thank-you page) but never got a confirmation email. Did it go through? Is something wrong with your emails?"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1363.003625000012,
+        "lookup_ms": 0.008832999999867752,
+        "draft_ms": 11406.315124999994,
+        "total_ms": 12769.479709000007
+      },
+      "cost_usd": 0.028627200000000002,
+      "created_at": "2026-11-05T11:01:48.832Z",
+      "triage": {
+        "backend": "d3",
+        "category": "bug",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4829",
+        "confidence": 0.6979764665362587,
+        "probabilities": {
+          "billing": 0.012595836155084287,
+          "shipping": 0.2675133860730275,
+          "refund": 0.001109267324966346,
+          "bug": 0.6979764665362587,
+          "other": 0.020805043910663266
+        }
+      },
+      "order": {
+        "id": "4829",
+        "customer": {
+          "name": "Ava Thompson",
+          "email": "ava.thompson@example.com"
+        },
+        "placed_at": "2026-11-03",
+        "status": "processing",
+        "items": [
+          {
+            "sku": "KP-MUG-B",
+            "name": "Stoneware Mug Set, Black (2)",
+            "qty": 1,
+            "unit_price": 42
+          },
+          {
+            "sku": "KP-BN-ETH",
+            "name": "Ethiopia Guji Beans 250 g",
+            "qty": 1,
+            "unit_price": 19
+          }
+        ],
+        "subtotal": 61,
+        "shipping": {
+          "method": "standard",
+          "fee": 6.9,
+          "carrier": null,
+          "tracking": null,
+          "events": []
+        },
+        "total": 67.9,
+        "payment": {
+          "method": "Visa •••• 8673",
+          "charges": [
+            {
+              "id": "ch_4829_1",
+              "amount": 67.9,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-11-03"
+            }
+          ]
+        },
+        "confirmation_email": "bounced (mailbox full)"
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Ava didn't get a confirmation email for order #4829 and wants to know if the order went through.",
+        "reply": "Hi Ava,\n\nThanks for checking. Your order went through. Order #4829 was placed today and is now being processed:\n\n- Stoneware Mug Set, Black (2) – $42.00\n- Ethiopia Guji Beans 250 g – $19.00\n- Standard shipping – $6.90\n- Total: $67.90, charged to your Visa ending in 8673\n\nOur emails are working fine. We tried to send your confirmation, but it bounced back because the mailbox was full at the time. There's nothing wrong with your order.\n\nWe can send you a copy of your receipt. Just reply to let us know whether to send it to this address or to another one.\n\nWhat happens next: your order will ship from Portland within 1–2 business days. Standard USPS delivery takes 3–7 business days after that. Once it ships, you'll get tracking details by email, so you may want to make sure your inbox has some space.\n\nWarm regards,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "send_invoice",
+            "detail": "Once Ava replies, send her a receipt copy for order #4829 ($67.90, Visa •••• 8673), to this address or to another one if she gives one."
+          }
+        ],
+        "internal_note": "Not a bug: the confirmation email bounced because Ava's mailbox was full. The order is processing and the $67.90 charge is captured (one charge only). Check that our reply and the later shipping emails actually reach her.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e41",
+      "email": {
+        "id": "e41",
+        "from_name": "Nathan Price",
+        "from_email": "nathan.price@example.net",
+        "received_at": "2026-11-02T14:44:00Z",
+        "subject": "Are your beans fair trade?",
+        "body": "Hi, are the Ethiopia Guji and Colombia Huila beans fair trade or direct trade? Who are the farmers?"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 461.689458000008,
+        "lookup_ms": 0.03833399998256937,
+        "draft_ms": 7099.965957999986,
+        "total_ms": 7562.282541999972
+      },
+      "cost_usd": 0.0183872,
+      "created_at": "2026-11-05T11:01:52.195Z",
+      "triage": {
+        "backend": "d3",
+        "category": "other",
+        "priority": "low",
+        "sentiment": "neutral",
+        "order_id": null,
+        "confidence": 0.9933635845337245,
+        "probabilities": {
+          "billing": 0.0003456967123102514,
+          "shipping": 0.0006254882684892924,
+          "refund": 0.0015438125168291893,
+          "bug": 0.004121417968646765,
+          "other": 0.9933635845337245
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "Customer wants to know if the Ethiopia Guji and Colombia Huila beans are fair trade or direct trade, and who the farmers are.",
+        "reply": "Hi Nathan,\n\nThanks for asking. It's good to know where your coffee comes from.\n\nI want to give you accurate details about the Ethiopia Guji and Colombia Huila, including how we source them (fair trade, direct trade or another way) and which farms or producers grow them. I don't want to guess, so I've passed your question to the teammate who handles our green coffee sourcing. They'll reply to you directly with the details.\n\nIf there's anything else you'd like to know about these coffees in the meantime, like roast level, tasting notes or brewing tips, just let me know.\n\nWarm regards,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "forward_to_owner",
+            "detail": "Forward to the coffee sourcing/product owner: the customer wants the sourcing model (fair trade vs direct trade) and the producer/farm details for Ethiopia Guji and Colombia Huila. Please reply to nathan.price@example.net."
+          }
+        ],
+        "internal_note": "This is a pre-sale question with no order attached. The policy has no sourcing or certification info, so I didn't make any claims. Someone who knows the sourcing needs to follow up.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e42",
+      "email": {
+        "id": "e42",
+        "from_name": "Nora Ahmed",
+        "from_email": "nora.ahmed@example.com",
+        "received_at": "2026-11-03T07:40:00Z",
+        "subject": "Order shipped but carrier has nothing",
+        "body": "Hello, order 4835 shows as shipped in my account since Thursday, but UPS just says 'label created'. Has it actually left?\n\nNora"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 957.7250000000058,
+        "lookup_ms": 0.018125000002328306,
+        "draft_ms": 13043.48775,
+        "total_ms": 14001.574209000013
+      },
+      "cost_usd": 0.0329792,
+      "created_at": "2026-11-05T11:01:53.552Z",
+      "triage": {
+        "backend": "d3",
+        "category": "shipping",
+        "priority": "urgent",
+        "sentiment": "frustrated",
+        "order_id": "4835",
+        "confidence": 0.9904438690110334,
+        "probabilities": {
+          "billing": 0.0008805506368402956,
+          "shipping": 0.9904438690110334,
+          "refund": 0.003430512910078096,
+          "bug": 0.0038611625150830374,
+          "other": 0.0013839049269651824
+        }
+      },
+      "order": {
+        "id": "4835",
+        "customer": {
+          "name": "Nora Ahmed",
+          "email": "nora.ahmed@example.com"
+        },
+        "placed_at": "2026-10-29",
+        "status": "shipped",
+        "items": [
+          {
+            "sku": "KP-GRD-PRO",
+            "name": "Burr Grinder Pro",
+            "qty": 1,
+            "unit_price": 189
+          }
+        ],
+        "subtotal": 189,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "UPS",
+          "tracking": "1ZKP48359902178085",
+          "events": [
+            {
+              "date": "2026-10-30",
+              "status": "Label created, not yet received by carrier"
+            }
+          ]
+        },
+        "total": 189,
+        "payment": {
+          "method": "Visa •••• 8895",
+          "charges": [
+            {
+              "id": "ch_4835_1",
+              "amount": 189,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-29"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Nora wants to know whether order 4835 has really left: it has shown as shipped since Thursday, but UPS only shows 'label created'.",
+        "reply": "Hi Nora,\n\nThanks for getting in touch, and sorry for the confusion. You're right. The UPS label for order 4835 (your Burr Grinder Pro) was created on October 30, but UPS hasn't scanned the parcel since then. That's why your account says \"shipped\" while UPS only says \"label created.\"\n\nHere's what we're doing:\n- We're checking with our Portland warehouse today to confirm the parcel was handed to UPS. We'll email you once we know.\n- Your tracking number is 1ZKP48359902178085. Sometimes the first scan only shows up once the parcel reaches a UPS facility, so it may start moving soon.\n- If there's still no movement by November 6 (7 days after the label was created), we'll open a trace with UPS. You can then choose between a free reship and a full refund.\n\nYou don't need to do anything for now. We'll keep you posted.\n\nWarm regards,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "forward_to_owner",
+            "detail": "Ask the Portland warehouse whether order 4835 (Burr Grinder Pro, UPS 1ZKP48359902178085) was actually handed to UPS. The label was created 2026-10-30 and there has been no carrier scan since. Email Nora with the answer."
+          },
+          {
+            "type": "none",
+            "detail": "If there is still no carrier scan by 2026-11-06, open a UPS trace and offer Nora a reship or a full refund ($189 to Visa •••• 8895)."
+          }
+        ],
+        "internal_note": "The order says 'standard' shipping but uses UPS. Policy says standard goes by USPS and UPS is for express, so check whether the carrier or method is wrong. The 7-day trace threshold is reached on Nov 6. Also, the prompt and environment give different 'today' dates (Nov 3 vs Nov 5). I went with Nov 3. If it's actually Nov 5, the trace date is tomorrow.",
+        "needs_attention": true
+      }
+    },
+    {
+      "id": "e43",
+      "email": {
+        "id": "e43",
+        "from_name": "Derek Owens",
+        "from_email": "derek.owens@example.net",
+        "received_at": "2026-11-03T09:01:00Z",
+        "subject": "Broken carafe - refund by Friday or I dispute",
+        "body": "The glass carafe in order 4810 arrived shattered. I emailed photos on Saturday and heard nothing. If I don't have a full refund by Friday I'm filing a dispute with my bank.\n\nDerek Owens"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 530.0979579999985,
+        "lookup_ms": 0.015249999996740371,
+        "draft_ms": 17938.878957999987,
+        "total_ms": 18469.39720799998
+      },
+      "cost_usd": 0.0362712,
+      "created_at": "2026-11-05T11:01:56.183Z",
+      "triage": {
+        "backend": "d3",
+        "category": "refund",
+        "priority": "urgent",
+        "sentiment": "frustrated",
+        "order_id": "4810",
+        "confidence": 0.9977698313624103,
+        "probabilities": {
+          "billing": 0.00030428677526406445,
+          "shipping": 0.0008291479306163569,
+          "refund": 0.9977698313624103,
+          "bug": 0.0007472697170412692,
+          "other": 0.0003494642146680574
+        }
+      },
+      "order": {
+        "id": "4810",
+        "customer": {
+          "name": "Derek Owens",
+          "email": "derek.owens@example.net"
+        },
+        "placed_at": "2026-10-24",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-CRF-6",
+            "name": "Glass Carafe 600 ml",
+            "qty": 1,
+            "unit_price": 36
+          },
+          {
+            "sku": "KP-DRP-02",
+            "name": "Ceramic Dripper",
+            "qty": 1,
+            "unit_price": 32
+          }
+        ],
+        "subtotal": 68,
+        "shipping": {
+          "method": "standard",
+          "fee": 6.9,
+          "carrier": "USPS",
+          "tracking": "9400111204810398916845",
+          "events": [
+            {
+              "date": "2026-10-25",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-29",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 74.9,
+        "payment": {
+          "method": "Visa •••• 7970",
+          "charges": [
+            {
+              "id": "ch_4810_1",
+              "amount": 74.9,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-24"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Derek's glass carafe from order 4810 arrived shattered. He says he emailed photos on Saturday and got no reply, and he wants a full refund by Friday or he'll dispute the charge with his bank.",
+        "reply": "Hi Derek,\n\nI'm sorry your Glass Carafe 600 ml arrived shattered, and sorry you didn't hear back after sending your photos on Saturday. You shouldn't have had to chase us.\n\nSince the carafe arrived damaged, we cover it in full. We're refunding the $36.00 for the carafe to your Visa ending in 7970 today. You don't need to send anything back, so please throw the broken glass away safely.\n\nOnce the refund is issued, it usually takes 5–10 business days to show on your statement, depending on your bank. We'll email you a confirmation when it goes through, and you can show that confirmation to your bank if you need to.\n\nIf you'd rather have a replacement carafe instead of the refund, just reply and we'll send one at no cost.\n\nSorry again for the trouble.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "partial_refund",
+            "detail": "Refund $36.00 (Glass Carafe 600 ml, KP-CRF-6) to Visa •••• 7970, order 4810, charge ch_4810_1. Don't send a return label. Send the customer a refund confirmation email."
+          },
+          {
+            "type": "forward_to_owner",
+            "detail": "Customer says he emailed damage photos on Saturday and got no reply. Find them and check for a missed or lost ticket."
+          }
+        ],
+        "internal_note": "Before approving: (1) Find Saturday's photos. If we can't, ask Derek to resend them instead of confirming the refund. (2) Decide whether to also refund the $6.90 shipping, since policy says \"we cover everything\" for damaged items. If yes, change the refund to $42.90 and update the reply. (3) Derek threatened a bank dispute if refunded later than Friday (Nov 6). The reply doesn't promise the money will arrive by then, because it can take 5–10 business days.",
+        "needs_attention": true
+      }
+    },
+    {
+      "id": "e44",
+      "email": {
+        "id": "e44",
+        "from_name": "Helen Park",
+        "from_email": "helen.park@brightloop.example",
+        "received_at": "2026-11-02T15:55:00Z",
+        "subject": "Office order: can we pay by invoice?",
+        "body": "Hi,\n\nWe're kitting out our new office kitchen and would like 4 burr grinders, 4 electric kettles and a few kilos of beans every month. Can we pay by invoice on net 30 terms rather than by card?\n\nHelen Park\nOperations, Brightloop"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1322.5981659999816,
+        "lookup_ms": 0.010584000003291294,
+        "draft_ms": 9148.414999999979,
+        "total_ms": 10471.164874999988
+      },
+      "cost_usd": 0.023519200000000004,
+      "created_at": "2026-11-05T11:01:59.757Z",
+      "triage": {
+        "backend": "d3",
+        "category": "billing",
+        "priority": "low",
+        "sentiment": "neutral",
+        "order_id": null,
+        "confidence": 0.8316046052359728,
+        "probabilities": {
+          "billing": 0.8316046052359728,
+          "shipping": 0.001576594083652853,
+          "refund": 0.0004215184637022612,
+          "bug": 0.0019083577533109096,
+          "other": 0.16448892446336122
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "Helen at Brightloop wants to buy 4 grinders, 4 kettles and a monthly bean supply for an office, and asks to pay by invoice on net 30 terms.",
+        "reply": "Hi Helen,\n\nThanks for thinking of us for your new office kitchen!\n\nYes, business orders over $500 can be paid by invoice on net 30 terms. These terms need approval first. To set that up, could you send us:\n\n- Your company's legal name, billing address and, if needed, a tax/VAT number\n- The delivery address for the office (we ship within the US and to Canada)\n- Which grinder and kettle models you'd like, or what you're looking for if you'd like a recommendation\n- For the monthly beans: roughly how many kilos, and any roast or origin preferences\n- A contact name and email for invoices\n\nWhen we have these details, a teammate will review the net 30 approval and follow up with a quote and next steps. That includes how the monthly bean orders would be billed.\n\nBest,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "forward_to_owner",
+            "detail": "Business invoice / net 30 request from Brightloop (Helen Park, helen.park@brightloop.example): 4 burr grinders, 4 electric kettles, plus a monthly bean supply. Needs approval for net 30 terms and a quote. Also decide how the recurring bean orders would be invoiced."
+          }
+        ],
+        "internal_note": "No existing order or account. The policy allows net 30 for business orders over $500 after approval, and this order will likely pass $500, but I didn't promise approval. The policy doesn't say whether recurring subscriptions can be invoiced, so I said a teammate would confirm that.",
+        "needs_attention": true
+      }
+    },
+    {
+      "id": "e45",
+      "email": {
+        "id": "e45",
+        "from_name": "Grace Liu",
+        "from_email": "grace.liu@example.org",
+        "received_at": "2026-11-02T19:58:00Z",
+        "subject": "Changed my mind on the scale",
+        "body": "Hi, I got a scale as a gift so I don't need the one from order 4823. It's unopened. Can I return it?\n\nGrace"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 2682.6880830000155,
+        "lookup_ms": 0.017290999996475875,
+        "draft_ms": 10688.444833000016,
+        "total_ms": 13371.438958999992
+      },
+      "cost_usd": 0.0293152,
+      "created_at": "2026-11-05T11:01:59.904Z",
+      "triage": {
+        "backend": "d3",
+        "category": "refund",
+        "priority": "normal",
+        "sentiment": "neutral",
+        "order_id": "4823",
+        "confidence": 0.9918719193739147,
+        "probabilities": {
+          "billing": 0.00026505822152428864,
+          "shipping": 0.0012723606746374578,
+          "refund": 0.9918719193739147,
+          "bug": 0.0006172631403384746,
+          "other": 0.0059733985895850505
+        }
+      },
+      "order": {
+        "id": "4823",
+        "customer": {
+          "name": "Grace Liu",
+          "email": "grace.liu@example.org"
+        },
+        "placed_at": "2026-10-22",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-SCL-01",
+            "name": "Digital Coffee Scale",
+            "qty": 1,
+            "unit_price": 49
+          }
+        ],
+        "subtotal": 49,
+        "shipping": {
+          "method": "standard",
+          "fee": 6.9,
+          "carrier": "USPS",
+          "tracking": "9400111204823399994999",
+          "events": [
+            {
+              "date": "2026-10-23",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-26",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 55.9,
+        "payment": {
+          "method": "Visa •••• 8451",
+          "charges": [
+            {
+              "id": "ch_4823_1",
+              "amount": 55.9,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-22"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Grace wants to return the unopened Digital Coffee Scale from order 4823 because she got one as a gift.",
+        "reply": "Hi Grace,\n\nYes, you can return it. Your Digital Coffee Scale from order 4823 was delivered on October 26, so you're well within our 30-day return window (it ends November 25). Since it's unused and still in its original packaging, it qualifies for a return.\n\nHere's what happens next:\n1. We'll send you the return instructions and our return address in a separate email shortly.\n2. Please pack the scale in its original packaging and send it back. Return shipping is paid by you for change-of-mind returns, so we suggest using a tracked service.\n3. Once it arrives, we'll refund $49.00 for the scale to your Visa ending in 8451. It usually shows up within 5–10 business days after we receive the return.\n\nIf you have any questions in the meantime, just reply to this email.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "send_return_label",
+            "detail": "Send return instructions and return address for order 4823 (1x Digital Coffee Scale, KP-SCL-01). This is a change-of-mind return, so the customer pays return shipping. Do not send a prepaid label unless that's how we normally handle these."
+          },
+          {
+            "type": "refund",
+            "detail": "After the return is received and checked as unused in original packaging, refund $49.00 (item price) to Visa •••• 8451 (charge ch_4823_1). Policy doesn't say whether the original $6.90 standard shipping is refunded."
+          }
+        ],
+        "internal_note": "The return is within policy: delivered 2026-10-26, window ends 2026-11-25. The reply only promises $49 back. Policy doesn't say whether the $6.90 original shipping fee is refunded, so I didn't promise it. Change this if our practice is different.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e46",
+      "email": {
+        "id": "e46",
+        "from_name": "Ryan Murphy",
+        "from_email": "ryan.murphy@example.org",
+        "received_at": "2026-11-03T06:20:00Z",
+        "subject": "Order 4817 returned to sender??",
+        "body": "Tracking says my order 4817 was returned to sender because the address wasn't found. The address is correct! I need those carafes for a gift this weekend. What can you do?"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 2504.6940419999883,
+        "lookup_ms": 0.016416999977082014,
+        "draft_ms": 16904.847500000003,
+        "total_ms": 19409.880250000017
+      },
+      "cost_usd": 0.0366832,
+      "created_at": "2026-11-05T11:02:01.602Z",
+      "triage": {
+        "backend": "d3",
+        "category": "shipping",
+        "priority": "urgent",
+        "sentiment": "frustrated",
+        "order_id": "4817",
+        "confidence": 0.8855263421361022,
+        "probabilities": {
+          "billing": 0.0008027978237224092,
+          "shipping": 0.8855263421361022,
+          "refund": 0.10261236571141831,
+          "bug": 0.006272719966077502,
+          "other": 0.004785774362679591
+        }
+      },
+      "order": {
+        "id": "4817",
+        "customer": {
+          "name": "Ryan Murphy",
+          "email": "ryan.murphy@example.org"
+        },
+        "placed_at": "2026-10-19",
+        "status": "returned_to_sender",
+        "items": [
+          {
+            "sku": "KP-CRF-6",
+            "name": "Glass Carafe 600 ml",
+            "qty": 2,
+            "unit_price": 36
+          }
+        ],
+        "subtotal": 72,
+        "shipping": {
+          "method": "standard",
+          "fee": 6.9,
+          "carrier": "USPS",
+          "tracking": "9400111204817399497389",
+          "events": [
+            {
+              "date": "2026-10-20",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-25",
+              "status": "Delivery attempted: address not found"
+            },
+            {
+              "date": "2026-10-31",
+              "status": "Returned to sender",
+              "location": "Portland, OR"
+            }
+          ]
+        },
+        "total": 78.9,
+        "payment": {
+          "method": "Visa •••• 8229",
+          "charges": [
+            {
+              "id": "ch_4817_1",
+              "amount": 78.9,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-19"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Ryan's order 4817 (2 glass carafes) was returned to sender after USPS said \"address not found\". He says the address is correct and needs the carafes for a gift this weekend.",
+        "reply": "Hi Ryan,\n\nI'm sorry. That's really frustrating, especially with a gift on the line. Here's what tracking shows: USPS shipped your order on October 20, tried to deliver it on October 25 and marked it \"address not found\". The parcel then came back to us in Portland on October 31. So your two Glass Carafes (600 ml) are safe with us and ready to go back out.\n\nTo make sure this doesn't happen again, could you reply with your full shipping address exactly as it should appear? Please include any apartment or unit number and any delivery notes. We'll check it against the address on the order and fix anything that doesn't match before we reship.\n\nOnce we have your address, we'll send the carafes out again. Because you need them this weekend, a teammate will look at sending them by UPS Express (1–3 business days) and confirm the details with you. I can't promise they'll arrive by the weekend, but we'll do our best to get them moving as soon as we hear from you.\n\nIf you'd rather not wait, we can also give you a full refund of $78.90 to your Visa ending in 8229. Just let me know which you'd prefer.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "reship",
+            "detail": "Once Ryan confirms his address, reship the 2x Glass Carafe 600 ml (KP-CRF-6) from order 4817. The parcel was returned to Portland on 2026-10-31. Check his address against the one on the order and correct it before shipping."
+          },
+          {
+            "type": "forward_to_owner",
+            "detail": "Decide whether to upgrade the reship to UPS Express at no charge so the gift can arrive this weekend. The policy doesn't cover this. If the address on file turns out to be correct, the USPS failure wasn't the customer's fault."
+          },
+          {
+            "type": "refund",
+            "detail": "Only if Ryan picks the refund instead of a reship: full $78.90 to Visa •••• 8229 (charge ch_4817_1)."
+          }
+        ],
+        "internal_note": "The order data doesn't include the shipping address, so compare it with what Ryan sends back. The policy has no rule for returned-to-sender parcels or for a free Express upgrade, so a person needs to decide on the Express upgrade. Hurry: this is urgent and it's already Tuesday, so the weekend is tight even with Express.",
+        "needs_attention": true
+      }
+    },
+    {
+      "id": "e47",
+      "email": {
+        "id": "e47",
+        "from_name": "Jack Wilson",
+        "from_email": "jack.wilson@example.net",
+        "received_at": "2026-11-02T13:05:00Z",
+        "subject": "Order not in my account",
+        "body": "I got a confirmation for order 4836 and the beans arrived, but the order doesn't appear in my account's order history. Is my account broken?"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1154.9940420000057,
+        "lookup_ms": 0.03216600001906045,
+        "draft_ms": 7754.0043749999895,
+        "total_ms": 8909.486333000008
+      },
+      "cost_usd": 0.022691199999999998,
+      "created_at": "2026-11-05T11:02:07.554Z",
+      "triage": {
+        "backend": "d3",
+        "category": "bug",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4836",
+        "confidence": 0.6564718738548225,
+        "probabilities": {
+          "billing": 0.015618207981232882,
+          "shipping": 0.2620527607622048,
+          "refund": 0.056169305792561616,
+          "bug": 0.6564718738548225,
+          "other": 0.009687851609178176
+        }
+      },
+      "order": {
+        "id": "4836",
+        "customer": {
+          "name": "Jack Wilson",
+          "email": "jack.wilson@example.net"
+        },
+        "placed_at": "2026-10-25",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-BN-COL",
+            "name": "Colombia Huila Beans 250 g",
+            "qty": 3,
+            "unit_price": 18
+          }
+        ],
+        "subtotal": 54,
+        "shipping": {
+          "method": "standard",
+          "fee": 6.9,
+          "carrier": "USPS",
+          "tracking": "9400111204836401073152",
+          "events": [
+            {
+              "date": "2026-10-26",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-29",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 60.9,
+        "payment": {
+          "method": "Visa •••• 8932",
+          "charges": [
+            {
+              "id": "ch_4836_1",
+              "amount": 60.9,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-25"
+            }
+          ]
+        },
+        "checkout": "guest"
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Jack's order 4836 was delivered but doesn't show in his account's order history, and he's asking if his account is broken.",
+        "reply": "Hi Jack,\n\nThanks for getting in touch, and I'm glad your Colombia Huila beans arrived safely. Your tracking shows they were delivered on October 29.\n\nYour account isn't broken. Order 4836 was placed through guest checkout on October 25, so it was never linked to an account. That's why it doesn't show in your order history. Orders you place while signed in will appear there as usual.\n\nI've asked a teammate to check whether we can add this order to your account, and they'll follow up with you. If you need a copy of the receipt in the meantime, just reply to this email and I'll send one over.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "forward_to_owner",
+            "detail": "Order 4836 was a guest checkout (jack.wilson@example.net). Please check whether it can be linked to the customer's account, then follow up with him."
+          }
+        ],
+        "internal_note": "This isn't a bug. Order data shows checkout: \"guest\", which explains why the order is missing from his history. Policy doesn't cover linking guest orders to accounts, so the reply doesn't promise it. Please confirm whether an account exists under this email.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e48",
+      "email": {
+        "id": "e48",
+        "from_name": "Alex Moreno",
+        "from_email": "alex.moreno@example.com",
+        "received_at": "2026-11-02T10:00:00Z",
+        "subject": "Barista / workshop job?",
+        "body": "Hi! I'm a barista with 5 years of experience and I'd love to work at your Portland workshop. Are you hiring? CV attached.\n\nAlex"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 500.81379200000083,
+        "lookup_ms": 0.04175000000395812,
+        "draft_ms": 6110.300166999979,
+        "total_ms": 6612.310792000004
+      },
+      "cost_usd": 0.0158832,
+      "created_at": "2026-11-05T11:02:10.228Z",
+      "triage": {
+        "backend": "d3",
+        "category": "other",
+        "priority": "low",
+        "sentiment": "neutral",
+        "order_id": null,
+        "confidence": 0.9981945546919332,
+        "probabilities": {
+          "billing": 0.00027758501157278327,
+          "shipping": 0.00038807636944107035,
+          "refund": 0.000591897836255576,
+          "bug": 0.000547886090797347,
+          "other": 0.9981945546919332
+        }
+      },
+      "order_match": "none",
+      "draft": {
+        "summary": "Alex is a barista asking whether the Portland workshop is hiring and has attached a CV.",
+        "reply": "Hi Alex,\n\nThanks for getting in touch, and for your interest in working with us at the Portland workshop!\n\nCustomer Care doesn't handle hiring, so I've passed your message and CV to the right person on our team. If there's a role that fits, they'll reach out to you directly.\n\nThanks again for thinking of Kettle & Pine.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "forward_to_owner",
+            "detail": "Forward Alex Moreno's job inquiry (barista, 5 years' experience, interested in the Portland workshop) and attached CV to whoever handles hiring."
+          }
+        ],
+        "internal_note": "This is a job inquiry, not a support request. There's no order. Please forward the email and CV to whoever handles hiring. The reply doesn't promise any role or response time.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e49",
+      "email": {
+        "id": "e49",
+        "from_name": "Fatima Zahra",
+        "from_email": "fatima.zahra@example.com",
+        "received_at": "2026-11-03T05:25:00Z",
+        "subject": "Order 4820 not shipped + invoice",
+        "body": "Hello,\n\nTwo things: my order 4820 still says processing after 4 days, when will it ship? And could you also send me an invoice for it?\n\nThank you,\nFatima"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1224.417375000019,
+        "lookup_ms": 0.012624999973922968,
+        "draft_ms": 11300.663749999978,
+        "total_ms": 12525.318165999983
+      },
+      "cost_usd": 0.028211200000000002,
+      "created_at": "2026-11-05T11:02:13.275Z",
+      "triage": {
+        "backend": "d3",
+        "category": "shipping",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4820",
+        "confidence": 0.9176475792835175,
+        "probabilities": {
+          "billing": 0.07940862376308092,
+          "shipping": 0.9176475792835175,
+          "refund": 0.00149253544809466,
+          "bug": 0.0005685332663834774,
+          "other": 0.0008827282389235068
+        }
+      },
+      "order": {
+        "id": "4820",
+        "customer": {
+          "name": "Fatima Zahra",
+          "email": "fatima.zahra@example.com"
+        },
+        "placed_at": "2026-10-30",
+        "status": "processing",
+        "items": [
+          {
+            "sku": "KP-GRD-PRO",
+            "name": "Burr Grinder Pro",
+            "qty": 1,
+            "unit_price": 189
+          },
+          {
+            "sku": "KP-BN-ETH",
+            "name": "Ethiopia Guji Beans 250 g",
+            "qty": 2,
+            "unit_price": 19
+          }
+        ],
+        "subtotal": 227,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": null,
+          "tracking": null,
+          "events": []
+        },
+        "total": 227,
+        "payment": {
+          "method": "Visa •••• 8340",
+          "charges": [
+            {
+              "id": "ch_4820_1",
+              "amount": 227,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-30"
+            }
+          ]
+        },
+        "hold_reason": "Burr Grinder Pro back-ordered, restock 2026-11-06"
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Fatima wants to know why order 4820 is still processing after 4 days and asks for an invoice.",
+        "reply": "Hello Fatima,\n\nThank you for your patience, and I'm sorry for the wait. Order 4820 hasn't shipped because the Burr Grinder Pro is on back-order. We expect it back in stock on November 6. Once it arrives we'll ship your full order (the grinder plus your 2 bags of Ethiopia Guji beans) within 1–2 business days. Standard shipping then takes 3–7 business days, and we'll email you tracking as soon as the order is on its way.\n\nIf you'd rather not wait, your order is still processing, so we can cancel it and give you a full refund. Just reply and let us know.\n\nI'm also sending you an invoice for order 4820 ($227.00, paid by Visa ending 8340) by email. If you need a company name, address or VAT number on it, send me the details and I'll add them.\n\nBest regards,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "send_invoice",
+            "detail": "Email invoice for order 4820 ($227.00, Visa •••• 8340, captured 2026-10-30) to fatima.zahra@example.com. Reissue with company/VAT details if she sends them."
+          }
+        ],
+        "internal_note": "Order is on hold because the Burr Grinder Pro is back-ordered (restock expected 2026-11-06). Check the restock date still holds before sending, and make sure the order ships as soon as stock arrives. She sounds frustrated.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e50",
+      "email": {
+        "id": "e50",
+        "from_name": "Liam Scott",
+        "from_email": "liam.scott@example.net",
+        "received_at": "2026-11-02T17:40:00Z",
+        "subject": "Why was I charged shipping?",
+        "body": "Your site says free shipping over $75. My order 4832 was $81 but I was charged $12.90 for shipping. Please refund the shipping fee."
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 1253.4252500000002,
+        "lookup_ms": 0.04237499998998828,
+        "draft_ms": 9610.471749999997,
+        "total_ms": 10864.40845799999
+      },
+      "cost_usd": 0.0264032,
+      "created_at": "2026-11-05T11:02:14.653Z",
+      "triage": {
+        "backend": "d3",
+        "category": "billing",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "order_id": "4832",
+        "confidence": 0.8190521373681646,
+        "probabilities": {
+          "billing": 0.8190521373681646,
+          "shipping": 0.16533689951540328,
+          "refund": 0.008314434816435628,
+          "bug": 0.005959674055254189,
+          "other": 0.0013368542447422113
+        }
+      },
+      "order": {
+        "id": "4832",
+        "customer": {
+          "name": "Liam Scott",
+          "email": "liam.scott@example.net"
+        },
+        "placed_at": "2026-10-31",
+        "status": "shipped",
+        "items": [
+          {
+            "sku": "KP-SCL-01",
+            "name": "Digital Coffee Scale",
+            "qty": 1,
+            "unit_price": 49
+          },
+          {
+            "sku": "KP-DRP-02",
+            "name": "Ceramic Dripper",
+            "qty": 1,
+            "unit_price": 32
+          }
+        ],
+        "subtotal": 81,
+        "shipping": {
+          "method": "express",
+          "fee": 12.9,
+          "carrier": "UPS",
+          "tracking": "1ZKP48327414131232",
+          "events": [
+            {
+              "date": "2026-11-01",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-11-02",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 93.9,
+        "payment": {
+          "method": "Visa •••• 8784",
+          "charges": [
+            {
+              "id": "ch_4832_1",
+              "amount": 93.9,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-31"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Customer wants the $12.90 shipping fee on order 4832 ($81 subtotal) refunded because of the free-shipping-over-$75 offer, but the order used paid express shipping.",
+        "reply": "Hi Liam,\n\nThanks for getting in touch, and I'm sorry the shipping charge was a surprise.\n\nI've looked at order 4832. Your subtotal of $81 did qualify for free shipping, but free shipping only covers our standard USPS service. Your order was placed with express shipping by UPS, which costs $12.90 no matter how much the order comes to. That's why the fee was charged. The upside is that express got your order to you quickly. It shipped from Portland on November 1, and UPS tracking (1ZKP48327414131232) shows it was delivered on November 2.\n\nSince the order was sent by express as selected, I'm not able to refund the shipping fee. I'm sorry that's not the answer you were hoping for. On future orders of $75 or more, if you choose standard shipping at checkout, shipping is free.\n\nIf anything else comes up with your scale or dripper, just reply to this email and we'll help.\n\nWarm regards,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "none",
+            "detail": "No refund. Express shipping ($12.90) was selected, and the free-shipping threshold only applies to standard shipping."
+          }
+        ],
+        "internal_note": "Order data shows express/UPS for $12.90 and a subtotal of $81, so the free-shipping offer (standard only) doesn't apply. Customer is frustrated. A goodwill gesture would be outside policy, so I didn't offer one. Also check that the site banner makes clear free shipping is standard only.",
+        "needs_attention": false
+      }
+    }
+  ]
+}

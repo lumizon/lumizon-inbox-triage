@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support Triage</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='4' fill='%23f2b33d'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="mark"></span><strong>support-triage</strong><span class="muted" data-business></span></div>
+    <div class="pills"><span class="pill" data-source></span><span class="pill" data-model></span></div>
+    <div class="controls">
+      <label class="count">Emails <select data-limit><option>1</option><option selected>5</option><option>10</option><option>50</option><option value="edge">Tricky (3)</option></select></label>
+      <button class="btn btn--primary" data-run>Process inbox</button>
+      <button class="btn btn--ghost" data-reset title="Clear the queue (mock inbox)">Reset</button>
+    </div>
+  </header>
+
+  <section class="stats">
+    <div class="stat"><span>Processed</span><b data-stat="total">0</b></div>
+    <div class="stat"><span>Avg per email</span><b data-stat="avg">–</b></div>
+    <div class="stat"><span>Time saved</span><b data-stat="saved">–</b></div>
+    <div class="stat"><span>Awaiting approval</span><b data-stat="awaiting">0</b></div>
+    <div class="stat stat--eval" data-eval hidden><span>Eval on synthetic set</span><b data-eval-text></b></div>
+  </section>
+
+  <main class="grid">
+    <aside class="side">
+      <div class="run">
+        <div class="run__bar"><i></i><i></i><i></i><span data-run-state>idle</span></div>
+        <ol class="run__log" data-log></ol>
+      </div>
+      <ul class="tickets" data-tickets></ul>
+    </aside>
+
+    <section class="detail" data-detail>
+      <div class="empty">
+        <p><b>No ticket selected.</b></p>
+        <p class="muted">Press <em>Process inbox</em> to triage new emails, then pick one to review the draft.</p>
+      </div>
+    </section>
+  </main>
+
+  <template id="detail-tpl">
+    <header class="d-head">
+      <div>
+        <h1 data-f="subject"></h1>
+        <p class="muted"><span data-f="from"></span> · <span data-f="received"></span></p>
+      </div>
+      <span class="status" data-f="status"></span>
+    </header>
+    <div class="tags" data-f="tags"></div>
+    <p class="summary" data-f="summary"></p>
+
+    <div class="cols">
+      <article class="card">
+        <h2>Customer email</h2>
+        <pre class="email" data-f="body"></pre>
+      </article>
+      <article class="card" data-f="order-card">
+        <h2>Order <span class="muted" data-f="match"></span></h2>
+        <div data-f="order"></div>
+      </article>
+    </div>
+
+    <article class="card">
+      <h2>Draft reply <span class="muted" data-f="timing"></span></h2>
+      <div class="note" data-f="note"></div>
+      <textarea data-f="reply" rows="12" spellcheck="true"></textarea>
+      <div class="actions-list" data-f="actions"></div>
+      <div class="decide" data-f="decide">
+        <button class="btn btn--primary" data-approve>Approve &amp; send</button>
+        <button class="btn btn--ghost" data-reject>Reject</button>
+        <span class="muted" data-f="delivery"></span>
+      </div>
+    </article>
+  </template>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

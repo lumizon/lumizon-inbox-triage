@@ -1,0 +1,1793 @@
+[
+  {
+    "id": "4801",
+    "customer": {
+      "name": "Priya Nair",
+      "email": "priya.nair@example.com"
+    },
+    "placed_at": "2026-10-04",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-GRD-PRO",
+        "name": "Burr Grinder Pro",
+        "qty": 1,
+        "unit_price": 189
+      }
+    ],
+    "subtotal": 189,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": "USPS",
+      "tracking": "9400111204801398170431",
+      "events": [
+        {
+          "date": "2026-10-05",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-10",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 189,
+    "payment": {
+      "method": "Visa •••• 7637",
+      "charges": [
+        {
+          "id": "ch_4801_1",
+          "amount": 189,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-04"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4802",
+    "customer": {
+      "name": "Tom Becker",
+      "email": "tom.becker@example.net"
+    },
+    "placed_at": "2026-10-20",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-KTL-GN",
+        "name": "Gooseneck Kettle (stovetop)",
+        "qty": 1,
+        "unit_price": 129
+      },
+      {
+        "sku": "KP-FLT-100",
+        "name": "Paper Filters (100)",
+        "qty": 1,
+        "unit_price": 8
+      }
+    ],
+    "subtotal": 137,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": "USPS",
+      "tracking": "9400111204802398253366",
+      "events": [
+        {
+          "date": "2026-10-21",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-25",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 137,
+    "payment": {
+      "method": "Visa •••• 7674",
+      "charges": [
+        {
+          "id": "ch_4802_1",
+          "amount": 137,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-20"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4803",
+    "customer": {
+      "name": "Aisha Bello",
+      "email": "aisha.bello@example.org"
+    },
+    "placed_at": "2026-10-26",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-SCL-01",
+        "name": "Digital Coffee Scale",
+        "qty": 1,
+        "unit_price": 49
+      },
+      {
+        "sku": "KP-FLT-100",
+        "name": "Paper Filters (100)",
+        "qty": 2,
+        "unit_price": 8
+      }
+    ],
+    "subtotal": 65,
+    "shipping": {
+      "method": "standard",
+      "fee": 6.9,
+      "carrier": "USPS",
+      "tracking": "9400111204803398336301",
+      "events": [
+        {
+          "date": "2026-10-27",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-11-01",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 71.9,
+    "payment": {
+      "method": "Visa •••• 7711",
+      "charges": [
+        {
+          "id": "ch_4803_1",
+          "amount": 71.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-26"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4804",
+    "customer": {
+      "name": "Lena Fischer",
+      "email": "lena.fischer@example.com"
+    },
+    "placed_at": "2026-10-14",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-BN-ETH",
+        "name": "Ethiopia Guji Beans 250 g",
+        "qty": 2,
+        "unit_price": 19
+      }
+    ],
+    "subtotal": 38,
+    "shipping": {
+      "method": "standard",
+      "fee": 6.9,
+      "carrier": "USPS",
+      "tracking": "9400111204804398419236",
+      "events": [
+        {
+          "date": "2026-10-15",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-19",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 44.9,
+    "payment": {
+      "method": "Visa •••• 7748",
+      "charges": [
+        {
+          "id": "ch_4804_1",
+          "amount": 44.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-14"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4805",
+    "customer": {
+      "name": "Jordan Reyes",
+      "email": "jordan.reyes@example.com"
+    },
+    "placed_at": "2026-10-25",
+    "status": "shipped",
+    "items": [
+      {
+        "sku": "KP-KTL-EL",
+        "name": "Electric Gooseneck Kettle",
+        "qty": 1,
+        "unit_price": 159
+      }
+    ],
+    "subtotal": 159,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": "USPS",
+      "tracking": "9400111204805398502170",
+      "events": [
+        {
+          "date": "2026-10-26",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-27",
+          "status": "In transit",
+          "location": "Reno, NV"
+        }
+      ]
+    },
+    "total": 159,
+    "payment": {
+      "method": "Visa •••• 7785",
+      "charges": [
+        {
+          "id": "ch_4805_1",
+          "amount": 159,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-25"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4806",
+    "customer": {
+      "name": "Hannah Ito",
+      "email": "hannah.ito@example.net"
+    },
+    "placed_at": "2026-10-18",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-MUG-W",
+        "name": "Stoneware Mug Set, White (2)",
+        "qty": 1,
+        "unit_price": 42
+      }
+    ],
+    "subtotal": 42,
+    "shipping": {
+      "method": "standard",
+      "fee": 6.9,
+      "carrier": "USPS",
+      "tracking": "9400111204806398585105",
+      "events": [
+        {
+          "date": "2026-10-19",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-22",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 48.9,
+    "payment": {
+      "method": "Visa •••• 7822",
+      "charges": [
+        {
+          "id": "ch_4806_1",
+          "amount": 48.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-18"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4807",
+    "customer": {
+      "name": "Marco Silva",
+      "email": "marco.silva@example.com"
+    },
+    "placed_at": "2026-09-24",
+    "status": "returned",
+    "items": [
+      {
+        "sku": "KP-GRD-HND",
+        "name": "Hand Grinder",
+        "qty": 1,
+        "unit_price": 79
+      }
+    ],
+    "subtotal": 79,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": "USPS",
+      "tracking": "9400111204807398668040",
+      "events": [
+        {
+          "date": "2026-09-25",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-09-29",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 79,
+    "payment": {
+      "method": "Visa •••• 7859",
+      "charges": [
+        {
+          "id": "ch_4807_1",
+          "amount": 79,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-09-24"
+        }
+      ]
+    },
+    "return": {
+      "requested": "2026-10-04",
+      "received": "2026-10-20",
+      "refund_status": "pending",
+      "refund_amount": 79
+    }
+  },
+  {
+    "id": "4808",
+    "customer": {
+      "name": "Wei Zhang",
+      "email": "wei.zhang@example.org"
+    },
+    "placed_at": "2026-10-23",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-DRP-02",
+        "name": "Ceramic Dripper",
+        "qty": 1,
+        "unit_price": 32
+      },
+      {
+        "sku": "KP-FLT-100",
+        "name": "Paper Filters (100)",
+        "qty": 1,
+        "unit_price": 8
+      }
+    ],
+    "subtotal": 40,
+    "shipping": {
+      "method": "standard",
+      "fee": 6.9,
+      "carrier": "USPS",
+      "tracking": "9400111204808398750975",
+      "events": [
+        {
+          "date": "2026-10-24",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-28",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 46.9,
+    "payment": {
+      "method": "Visa •••• 7896",
+      "charges": [
+        {
+          "id": "ch_4808_1",
+          "amount": 46.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-23"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4809",
+    "customer": {
+      "name": "Elena Petrova",
+      "email": "elena.petrova@example.com"
+    },
+    "placed_at": "2026-10-28",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-GRD-PRO",
+        "name": "Burr Grinder Pro",
+        "qty": 1,
+        "unit_price": 189
+      }
+    ],
+    "subtotal": 189,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": "UPS",
+      "tracking": "1ZKP48098339105359",
+      "events": [
+        {
+          "date": "2026-10-29",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-11-02",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 189,
+    "payment": {
+      "method": "Visa •••• 7933",
+      "charges": [
+        {
+          "id": "ch_4809_1",
+          "amount": 189,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-28"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4810",
+    "customer": {
+      "name": "Derek Owens",
+      "email": "derek.owens@example.net"
+    },
+    "placed_at": "2026-10-24",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-CRF-6",
+        "name": "Glass Carafe 600 ml",
+        "qty": 1,
+        "unit_price": 36
+      },
+      {
+        "sku": "KP-DRP-02",
+        "name": "Ceramic Dripper",
+        "qty": 1,
+        "unit_price": 32
+      }
+    ],
+    "subtotal": 68,
+    "shipping": {
+      "method": "standard",
+      "fee": 6.9,
+      "carrier": "USPS",
+      "tracking": "9400111204810398916845",
+      "events": [
+        {
+          "date": "2026-10-25",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-29",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 74.9,
+    "payment": {
+      "method": "Visa •••• 7970",
+      "charges": [
+        {
+          "id": "ch_4810_1",
+          "amount": 74.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-24"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4811",
+    "customer": {
+      "name": "Gloria Martinez",
+      "email": "gloria.martinez@example.com"
+    },
+    "placed_at": "2026-10-18",
+    "status": "shipped",
+    "items": [
+      {
+        "sku": "KP-KTL-GN",
+        "name": "Gooseneck Kettle (stovetop)",
+        "qty": 1,
+        "unit_price": 129
+      },
+      {
+        "sku": "KP-SCL-01",
+        "name": "Digital Coffee Scale",
+        "qty": 1,
+        "unit_price": 49
+      }
+    ],
+    "subtotal": 178,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": "USPS",
+      "tracking": "9400111204811398999780",
+      "events": [
+        {
+          "date": "2026-10-20",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-22",
+          "status": "In transit",
+          "location": "Denver, CO"
+        }
+      ]
+    },
+    "total": 178,
+    "payment": {
+      "method": "Visa •••• 8007",
+      "charges": [
+        {
+          "id": "ch_4811_1",
+          "amount": 178,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-18"
+        }
+      ]
+    },
+    "previous_contacts": 2
+  },
+  {
+    "id": "4812",
+    "customer": {
+      "name": "Ben Carter",
+      "email": "ben.carter@example.org"
+    },
+    "placed_at": "2026-10-31",
+    "status": "shipped",
+    "items": [
+      {
+        "sku": "KP-GRD-HND",
+        "name": "Hand Grinder",
+        "qty": 1,
+        "unit_price": 79
+      },
+      {
+        "sku": "KP-BN-COL",
+        "name": "Colombia Huila Beans 250 g",
+        "qty": 1,
+        "unit_price": 18
+      }
+    ],
+    "subtotal": 97,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": "USPS",
+      "tracking": "9400111204812399082715",
+      "events": [
+        {
+          "date": "2026-11-01",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        }
+      ]
+    },
+    "total": 97,
+    "payment": {
+      "method": "Visa •••• 8044",
+      "charges": [
+        {
+          "id": "ch_4812_1",
+          "amount": 97,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-31"
+        },
+        {
+          "id": "ch_4812_2",
+          "amount": 97,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-31"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4813",
+    "customer": {
+      "name": "Kim Nguyen",
+      "email": "kim.nguyen@example.com"
+    },
+    "placed_at": "2026-10-25",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-DRP-02",
+        "name": "Ceramic Dripper",
+        "qty": 1,
+        "unit_price": 32
+      },
+      {
+        "sku": "KP-FLT-100",
+        "name": "Paper Filters (100)",
+        "qty": 1,
+        "unit_price": 8
+      },
+      {
+        "sku": "KP-BN-ETH",
+        "name": "Ethiopia Guji Beans 250 g",
+        "qty": 1,
+        "unit_price": 19
+      }
+    ],
+    "subtotal": 59,
+    "shipping": {
+      "method": "standard",
+      "fee": 6.9,
+      "carrier": "USPS",
+      "tracking": "9400111204813399165650",
+      "events": [
+        {
+          "date": "2026-10-26",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-30",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 65.9,
+    "payment": {
+      "method": "Visa •••• 8081",
+      "charges": [
+        {
+          "id": "ch_4813_1",
+          "amount": 65.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-25"
+        }
+      ]
+    },
+    "packed_weight_note": "Package weight at delivery 0.9 lb, expected 1.3 lb"
+  },
+  {
+    "id": "4814",
+    "customer": {
+      "name": "Olivia Brooks",
+      "email": "olivia.brooks@example.net"
+    },
+    "placed_at": "2026-10-27",
+    "status": "shipped",
+    "items": [
+      {
+        "sku": "KP-KTL-EL",
+        "name": "Electric Gooseneck Kettle",
+        "qty": 1,
+        "unit_price": 159
+      },
+      {
+        "sku": "KP-MUG-W",
+        "name": "Stoneware Mug Set, White (2)",
+        "qty": 1,
+        "unit_price": 42
+      }
+    ],
+    "subtotal": 201,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": null,
+      "tracking": null,
+      "events": []
+    },
+    "total": 201,
+    "payment": {
+      "method": "Visa •••• 8118",
+      "charges": [
+        {
+          "id": "ch_4814_1",
+          "amount": 201,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-27"
+        }
+      ]
+    },
+    "parcels": [
+      {
+        "items": [
+          "KP-MUG-W"
+        ],
+        "carrier": "USPS",
+        "tracking": "9400111202555842761031",
+        "status": "Delivered",
+        "date": "2026-11-01"
+      },
+      {
+        "items": [
+          "KP-KTL-EL"
+        ],
+        "carrier": "USPS",
+        "tracking": "9400111202555842761048",
+        "status": "In transit, expected 2026-11-05",
+        "date": "2026-11-02"
+      }
+    ]
+  },
+  {
+    "id": "4815",
+    "customer": {
+      "name": "Lukas Wagner",
+      "email": "lukas@wagnerstudio.example"
+    },
+    "placed_at": "2026-10-22",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-GRD-PRO",
+        "name": "Burr Grinder Pro",
+        "qty": 2,
+        "unit_price": 189
+      },
+      {
+        "sku": "KP-SCL-01",
+        "name": "Digital Coffee Scale",
+        "qty": 2,
+        "unit_price": 49
+      }
+    ],
+    "subtotal": 476,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": "USPS",
+      "tracking": "9400111204815399331519",
+      "events": [
+        {
+          "date": "2026-10-23",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-27",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 476,
+    "payment": {
+      "method": "Visa •••• 8155",
+      "charges": [
+        {
+          "id": "ch_4815_1",
+          "amount": 476,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-22"
+        }
+      ]
+    },
+    "company": "Wagner Studio LLC"
+  },
+  {
+    "id": "4816",
+    "customer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@example.com"
+    },
+    "placed_at": "2026-10-29",
+    "status": "shipped",
+    "items": [
+      {
+        "sku": "KP-KTL-GN",
+        "name": "Gooseneck Kettle (stovetop)",
+        "qty": 1,
+        "unit_price": 129
+      }
+    ],
+    "subtotal": 129,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": "UPS",
+      "tracking": "1ZKP48164144548016",
+      "events": [
+        {
+          "date": "2026-10-30",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-11-02",
+          "status": "In transit",
+          "location": "Columbus, OH"
+        }
+      ]
+    },
+    "total": 129,
+    "payment": {
+      "method": "Visa •••• 8192",
+      "charges": [
+        {
+          "id": "ch_4816_1",
+          "amount": 129,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-29"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4817",
+    "customer": {
+      "name": "Ryan Murphy",
+      "email": "ryan.murphy@example.org"
+    },
+    "placed_at": "2026-10-19",
+    "status": "returned_to_sender",
+    "items": [
+      {
+        "sku": "KP-CRF-6",
+        "name": "Glass Carafe 600 ml",
+        "qty": 2,
+        "unit_price": 36
+      }
+    ],
+    "subtotal": 72,
+    "shipping": {
+      "method": "standard",
+      "fee": 6.9,
+      "carrier": "USPS",
+      "tracking": "9400111204817399497389",
+      "events": [
+        {
+          "date": "2026-10-20",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-25",
+          "status": "Delivery attempted: address not found"
+        },
+        {
+          "date": "2026-10-31",
+          "status": "Returned to sender",
+          "location": "Portland, OR"
+        }
+      ]
+    },
+    "total": 78.9,
+    "payment": {
+      "method": "Visa •••• 8229",
+      "charges": [
+        {
+          "id": "ch_4817_1",
+          "amount": 78.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-19"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4818",
+    "customer": {
+      "name": "Chloe Adams",
+      "email": "chloe.adams@example.com"
+    },
+    "placed_at": "2026-10-26",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-MUG-W",
+        "name": "Stoneware Mug Set, White (2)",
+        "qty": 2,
+        "unit_price": 42
+      }
+    ],
+    "subtotal": 84,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": "USPS",
+      "tracking": "9400111204818399580324",
+      "events": [
+        {
+          "date": "2026-10-27",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-31",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 84,
+    "payment": {
+      "method": "Visa •••• 8266",
+      "charges": [
+        {
+          "id": "ch_4818_1",
+          "amount": 84,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-26"
+        }
+      ]
+    },
+    "fulfilment_note": "Picked SKU KP-MUG-B x2 (scan mismatch flagged)"
+  },
+  {
+    "id": "4819",
+    "customer": {
+      "name": "David Kim",
+      "email": "david.kim@example.net"
+    },
+    "placed_at": "2026-10-09",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-SCL-01",
+        "name": "Digital Coffee Scale",
+        "qty": 1,
+        "unit_price": 49
+      }
+    ],
+    "subtotal": 49,
+    "shipping": {
+      "method": "standard",
+      "fee": 6.9,
+      "carrier": "USPS",
+      "tracking": "9400111204819399663259",
+      "events": [
+        {
+          "date": "2026-10-10",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-14",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 55.9,
+    "payment": {
+      "method": "Visa •••• 8303",
+      "charges": [
+        {
+          "id": "ch_4819_1",
+          "amount": 55.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-09"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4820",
+    "customer": {
+      "name": "Fatima Zahra",
+      "email": "fatima.zahra@example.com"
+    },
+    "placed_at": "2026-10-30",
+    "status": "processing",
+    "items": [
+      {
+        "sku": "KP-GRD-PRO",
+        "name": "Burr Grinder Pro",
+        "qty": 1,
+        "unit_price": 189
+      },
+      {
+        "sku": "KP-BN-ETH",
+        "name": "Ethiopia Guji Beans 250 g",
+        "qty": 2,
+        "unit_price": 19
+      }
+    ],
+    "subtotal": 227,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": null,
+      "tracking": null,
+      "events": []
+    },
+    "total": 227,
+    "payment": {
+      "method": "Visa •••• 8340",
+      "charges": [
+        {
+          "id": "ch_4820_1",
+          "amount": 227,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-30"
+        }
+      ]
+    },
+    "hold_reason": "Burr Grinder Pro back-ordered, restock 2026-11-06"
+  },
+  {
+    "id": "4821",
+    "customer": {
+      "name": "Maya Chen",
+      "email": "maya.chen@example.com"
+    },
+    "placed_at": "2026-10-24",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-KTL-GN",
+        "name": "Gooseneck Kettle (stovetop)",
+        "qty": 1,
+        "unit_price": 129
+      }
+    ],
+    "subtotal": 129,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": "USPS",
+      "tracking": "9400111204821399829129",
+      "events": [
+        {
+          "date": "2026-10-25",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-28",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 129,
+    "payment": {
+      "method": "Visa •••• 8377",
+      "charges": [
+        {
+          "id": "ch_4821_1",
+          "amount": 129,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-24"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4822",
+    "customer": {
+      "name": "Carlos Romero",
+      "email": "carlos.romero@example.es"
+    },
+    "placed_at": "2026-10-20",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-GRD-HND",
+        "name": "Hand Grinder",
+        "qty": 1,
+        "unit_price": 79
+      }
+    ],
+    "subtotal": 79,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": "USPS",
+      "tracking": "9400111204822399912064",
+      "events": [
+        {
+          "date": "2026-10-21",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-24",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 79,
+    "payment": {
+      "method": "Visa •••• 8414",
+      "charges": [
+        {
+          "id": "ch_4822_1",
+          "amount": 79,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-20"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4823",
+    "customer": {
+      "name": "Grace Liu",
+      "email": "grace.liu@example.org"
+    },
+    "placed_at": "2026-10-22",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-SCL-01",
+        "name": "Digital Coffee Scale",
+        "qty": 1,
+        "unit_price": 49
+      }
+    ],
+    "subtotal": 49,
+    "shipping": {
+      "method": "standard",
+      "fee": 6.9,
+      "carrier": "USPS",
+      "tracking": "9400111204823399994999",
+      "events": [
+        {
+          "date": "2026-10-23",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-26",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 55.9,
+    "payment": {
+      "method": "Visa •••• 8451",
+      "charges": [
+        {
+          "id": "ch_4823_1",
+          "amount": 55.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-22"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4824",
+    "customer": {
+      "name": "Noah Patel",
+      "email": "noah.patel@example.com"
+    },
+    "placed_at": "2026-11-01",
+    "status": "processing",
+    "items": [
+      {
+        "sku": "KP-KTL-EL",
+        "name": "Electric Gooseneck Kettle",
+        "qty": 1,
+        "unit_price": 159
+      }
+    ],
+    "subtotal": 159,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": null,
+      "tracking": null,
+      "events": []
+    },
+    "total": 159,
+    "payment": {
+      "method": "Visa •••• 8488",
+      "charges": [
+        {
+          "id": "ch_4824_1",
+          "amount": 159,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4825",
+    "customer": {
+      "name": "Emma Rossi",
+      "email": "emma.rossi@example.it"
+    },
+    "placed_at": "2026-10-28",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-DRP-02",
+        "name": "Ceramic Dripper",
+        "qty": 1,
+        "unit_price": 32
+      },
+      {
+        "sku": "KP-BN-COL",
+        "name": "Colombia Huila Beans 250 g",
+        "qty": 2,
+        "unit_price": 18
+      }
+    ],
+    "subtotal": 68,
+    "shipping": {
+      "method": "standard",
+      "fee": 6.9,
+      "carrier": "USPS",
+      "tracking": "9400111204825400160868",
+      "events": [
+        {
+          "date": "2026-10-29",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-11-02",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 74.9,
+    "payment": {
+      "method": "Visa •••• 8525",
+      "charges": [
+        {
+          "id": "ch_4825_1",
+          "amount": 74.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-28"
+        }
+      ]
+    },
+    "card_country": "IT"
+  },
+  {
+    "id": "4826",
+    "customer": {
+      "name": "Julien Moreau",
+      "email": "julien.moreau@example.ca"
+    },
+    "placed_at": "2026-10-22",
+    "status": "shipped",
+    "items": [
+      {
+        "sku": "KP-KTL-GN",
+        "name": "Gooseneck Kettle (stovetop)",
+        "qty": 1,
+        "unit_price": 129
+      }
+    ],
+    "subtotal": 129,
+    "shipping": {
+      "method": "canada",
+      "fee": 19,
+      "carrier": "USPS / Canada Post",
+      "tracking": "9400111204826400243803",
+      "events": [
+        {
+          "date": "2026-10-23",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-28",
+          "status": "Customs cleared",
+          "location": "Vancouver, BC"
+        },
+        {
+          "date": "2026-11-01",
+          "status": "In transit",
+          "location": "Montréal, QC"
+        }
+      ]
+    },
+    "total": 148,
+    "payment": {
+      "method": "Visa •••• 8562",
+      "charges": [
+        {
+          "id": "ch_4826_1",
+          "amount": 148,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-22"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4827",
+    "customer": {
+      "name": "Isabel Torres",
+      "email": "isabel.torres@example.com"
+    },
+    "placed_at": "2026-10-28",
+    "status": "shipped",
+    "items": [
+      {
+        "sku": "KP-SCL-01",
+        "name": "Digital Coffee Scale",
+        "qty": 1,
+        "unit_price": 49
+      }
+    ],
+    "subtotal": 49,
+    "shipping": {
+      "method": "express",
+      "fee": 12.9,
+      "carrier": "USPS",
+      "tracking": "9400111204827400326738",
+      "events": [
+        {
+          "date": "2026-10-29",
+          "status": "Shipped (USPS Ground Advantage)",
+          "location": "Portland, OR"
+        }
+      ]
+    },
+    "total": 61.9,
+    "payment": {
+      "method": "Visa •••• 8599",
+      "charges": [
+        {
+          "id": "ch_4827_1",
+          "amount": 61.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-28"
+        }
+      ]
+    },
+    "fulfilment_note": "Shipped with standard USPS label in error; express was paid"
+  },
+  {
+    "id": "4828",
+    "customer": {
+      "name": "Sean O'Brien",
+      "email": "sean.obrien@example.net"
+    },
+    "placed_at": "2026-10-27",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-KTL-GN",
+        "name": "Gooseneck Kettle (stovetop)",
+        "qty": 1,
+        "unit_price": 129
+      }
+    ],
+    "subtotal": 129,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": "USPS",
+      "tracking": "9400111204828400409673",
+      "events": [
+        {
+          "date": "2026-10-28",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-31",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 129,
+    "payment": {
+      "method": "Visa •••• 8636",
+      "charges": [
+        {
+          "id": "ch_4828_1",
+          "amount": 129,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-27"
+        }
+      ]
+    },
+    "current_price": {
+      "KP-KTL-GN": 109
+    }
+  },
+  {
+    "id": "4829",
+    "customer": {
+      "name": "Ava Thompson",
+      "email": "ava.thompson@example.com"
+    },
+    "placed_at": "2026-11-03",
+    "status": "processing",
+    "items": [
+      {
+        "sku": "KP-MUG-B",
+        "name": "Stoneware Mug Set, Black (2)",
+        "qty": 1,
+        "unit_price": 42
+      },
+      {
+        "sku": "KP-BN-ETH",
+        "name": "Ethiopia Guji Beans 250 g",
+        "qty": 1,
+        "unit_price": 19
+      }
+    ],
+    "subtotal": 61,
+    "shipping": {
+      "method": "standard",
+      "fee": 6.9,
+      "carrier": null,
+      "tracking": null,
+      "events": []
+    },
+    "total": 67.9,
+    "payment": {
+      "method": "Visa •••• 8673",
+      "charges": [
+        {
+          "id": "ch_4829_1",
+          "amount": 67.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-11-03"
+        }
+      ]
+    },
+    "confirmation_email": "bounced (mailbox full)"
+  },
+  {
+    "id": "4830",
+    "customer": {
+      "name": "Ethan Wright",
+      "email": "ethan.wright@example.org"
+    },
+    "placed_at": "2026-11-02",
+    "status": "processing",
+    "items": [
+      {
+        "sku": "KP-GRD-HND",
+        "name": "Hand Grinder",
+        "qty": 1,
+        "unit_price": 79
+      },
+      {
+        "sku": "KP-SCL-01",
+        "name": "Digital Coffee Scale",
+        "qty": 1,
+        "unit_price": 49
+      }
+    ],
+    "subtotal": 128,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": null,
+      "tracking": null,
+      "events": []
+    },
+    "total": 128,
+    "payment": {
+      "method": "Visa •••• 8710",
+      "charges": [
+        {
+          "id": "ch_4830_1",
+          "amount": 128,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-11-02"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4831",
+    "customer": {
+      "name": "Mia Johnson",
+      "email": "mia.johnson@example.com"
+    },
+    "placed_at": "2026-11-02",
+    "status": "processing",
+    "items": [
+      {
+        "sku": "KP-CRF-6",
+        "name": "Glass Carafe 600 ml",
+        "qty": 1,
+        "unit_price": 36
+      }
+    ],
+    "subtotal": 36,
+    "shipping": {
+      "method": "standard",
+      "fee": 6.9,
+      "carrier": null,
+      "tracking": null,
+      "events": []
+    },
+    "total": 42.9,
+    "payment": {
+      "method": "Visa •••• 8747",
+      "charges": [
+        {
+          "id": "ch_4831_1",
+          "amount": 42.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-11-02"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4832",
+    "customer": {
+      "name": "Liam Scott",
+      "email": "liam.scott@example.net"
+    },
+    "placed_at": "2026-10-31",
+    "status": "shipped",
+    "items": [
+      {
+        "sku": "KP-SCL-01",
+        "name": "Digital Coffee Scale",
+        "qty": 1,
+        "unit_price": 49
+      },
+      {
+        "sku": "KP-DRP-02",
+        "name": "Ceramic Dripper",
+        "qty": 1,
+        "unit_price": 32
+      }
+    ],
+    "subtotal": 81,
+    "shipping": {
+      "method": "express",
+      "fee": 12.9,
+      "carrier": "UPS",
+      "tracking": "1ZKP48327414131232",
+      "events": [
+        {
+          "date": "2026-11-01",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-11-02",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 93.9,
+    "payment": {
+      "method": "Visa •••• 8784",
+      "charges": [
+        {
+          "id": "ch_4832_1",
+          "amount": 93.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-31"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4833",
+    "customer": {
+      "name": "Zoe Campbell",
+      "email": "zoe.campbell@example.com"
+    },
+    "placed_at": "2026-11-01",
+    "status": "processing",
+    "items": [
+      {
+        "sku": "KP-SUB-M",
+        "name": "Monthly Beans Subscription",
+        "qty": 1,
+        "unit_price": 34
+      }
+    ],
+    "subtotal": 34,
+    "shipping": {
+      "method": "standard",
+      "fee": 6.9,
+      "carrier": null,
+      "tracking": null,
+      "events": []
+    },
+    "total": 40.9,
+    "payment": {
+      "method": "Visa •••• 8821",
+      "charges": [
+        {
+          "id": "ch_4833_1",
+          "amount": 40.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    "subscription": {
+      "status": "cancelled",
+      "cancelled_at": "2026-10-29",
+      "next_billing_date": "2026-11-01",
+      "note": "Renewal charged on 2026-11-01 after cancellation (sync delay)"
+    }
+  },
+  {
+    "id": "4834",
+    "customer": {
+      "name": "Henry Clark",
+      "email": "henry.clark@example.org"
+    },
+    "placed_at": "2026-11-02",
+    "status": "processing",
+    "items": [
+      {
+        "sku": "KP-KTL-EL",
+        "name": "Electric Gooseneck Kettle",
+        "qty": 1,
+        "unit_price": 159
+      }
+    ],
+    "subtotal": 159,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": null,
+      "tracking": null,
+      "events": []
+    },
+    "total": 159,
+    "payment": {
+      "method": "Visa •••• 8858",
+      "charges": [
+        {
+          "id": "ch_4834_1",
+          "amount": 159,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-11-02"
+        }
+      ]
+    },
+    "shipping_address_city": "Portland, OR"
+  },
+  {
+    "id": "4835",
+    "customer": {
+      "name": "Nora Ahmed",
+      "email": "nora.ahmed@example.com"
+    },
+    "placed_at": "2026-10-29",
+    "status": "shipped",
+    "items": [
+      {
+        "sku": "KP-GRD-PRO",
+        "name": "Burr Grinder Pro",
+        "qty": 1,
+        "unit_price": 189
+      }
+    ],
+    "subtotal": 189,
+    "shipping": {
+      "method": "standard",
+      "fee": 0,
+      "carrier": "UPS",
+      "tracking": "1ZKP48359902178085",
+      "events": [
+        {
+          "date": "2026-10-30",
+          "status": "Label created, not yet received by carrier"
+        }
+      ]
+    },
+    "total": 189,
+    "payment": {
+      "method": "Visa •••• 8895",
+      "charges": [
+        {
+          "id": "ch_4835_1",
+          "amount": 189,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-29"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4836",
+    "customer": {
+      "name": "Jack Wilson",
+      "email": "jack.wilson@example.net"
+    },
+    "placed_at": "2026-10-25",
+    "status": "delivered",
+    "items": [
+      {
+        "sku": "KP-BN-COL",
+        "name": "Colombia Huila Beans 250 g",
+        "qty": 3,
+        "unit_price": 18
+      }
+    ],
+    "subtotal": 54,
+    "shipping": {
+      "method": "standard",
+      "fee": 6.9,
+      "carrier": "USPS",
+      "tracking": "9400111204836401073152",
+      "events": [
+        {
+          "date": "2026-10-26",
+          "status": "Shipped",
+          "location": "Portland, OR"
+        },
+        {
+          "date": "2026-10-29",
+          "status": "Delivered"
+        }
+      ]
+    },
+    "total": 60.9,
+    "payment": {
+      "method": "Visa •••• 8932",
+      "charges": [
+        {
+          "id": "ch_4836_1",
+          "amount": 60.9,
+          "currency": "USD",
+          "status": "captured",
+          "date": "2026-10-25"
+        }
+      ]
+    },
+    "checkout": "guest"
+  }
+]

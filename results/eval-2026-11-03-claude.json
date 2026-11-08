@@ -1,0 +1,348 @@
+{
+  "summary": {
+    "date": "2026-11-03",
+    "triage_backend": "claude",
+    "emails": 3,
+    "errors": 0,
+    "category_accuracy": 100,
+    "priority_accuracy": 100,
+    "order_match_accuracy": 100,
+    "avg_seconds_per_email": 15.8,
+    "avg_triage_seconds": 4.85,
+    "drafts": true,
+    "manual_minutes_per_email": 4,
+    "cost_usd_total": 0.143,
+    "cost_usd_per_email": 0.0475,
+    "wall_seconds": 33,
+    "headline": "3 test emails: 100% correctly tagged, 100% matched to the right order, 16 seconds per email instead of 4 minutes."
+  },
+  "matrix": {
+    "billing": {
+      "billing": 1,
+      "shipping": 0,
+      "refund": 0,
+      "bug": 0,
+      "other": 0,
+      "error": 0
+    },
+    "shipping": {
+      "billing": 0,
+      "shipping": 1,
+      "refund": 0,
+      "bug": 0,
+      "other": 0,
+      "error": 0
+    },
+    "refund": {
+      "billing": 0,
+      "shipping": 0,
+      "refund": 1,
+      "bug": 0,
+      "other": 0,
+      "error": 0
+    },
+    "bug": {
+      "billing": 0,
+      "shipping": 0,
+      "refund": 0,
+      "bug": 0,
+      "other": 0,
+      "error": 0
+    },
+    "other": {
+      "billing": 0,
+      "shipping": 0,
+      "refund": 0,
+      "bug": 0,
+      "other": 0,
+      "error": 0
+    }
+  },
+  "misses": [],
+  "tickets": [
+    {
+      "id": "e01",
+      "email": {
+        "id": "e01",
+        "from_name": "Maya Chen",
+        "from_email": "maya.chen@example.com",
+        "received_at": "2026-11-03T09:14:00Z",
+        "subject": "Refund for order #4821?",
+        "body": "Hi there,\n\nThe gooseneck kettle arrived last week and it's lovely, but it doesn't sit flat on my induction hob, it wobbles. I haven't used it since. Can I send it back for a refund?\n\nThanks,\nMaya"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 4511.042125,
+        "lookup_ms": 0.14420900000004622,
+        "draft_ms": 12393.753125000001,
+        "total_ms": 16905.746375000002
+      },
+      "cost_usd": 0.064096,
+      "created_at": "2026-11-03T14:51:17.998Z",
+      "triage": {
+        "backend": "claude",
+        "category": "refund",
+        "priority": "normal",
+        "sentiment": "neutral",
+        "summary": "Customer wants to return the gooseneck kettle from order #4821 for a refund because it wobbles on her induction hob.",
+        "confidence": 0.93,
+        "order_id": "4821"
+      },
+      "order": {
+        "id": "4821",
+        "customer": {
+          "name": "Maya Chen",
+          "email": "maya.chen@example.com"
+        },
+        "placed_at": "2026-10-24",
+        "status": "delivered",
+        "items": [
+          {
+            "sku": "KP-KTL-GN",
+            "name": "Gooseneck Kettle (stovetop)",
+            "qty": 1,
+            "unit_price": 129
+          }
+        ],
+        "subtotal": 129,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "USPS",
+          "tracking": "1Z4821KP177499",
+          "events": [
+            {
+              "date": "2026-10-25",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-28",
+              "status": "Delivered"
+            }
+          ]
+        },
+        "total": 129,
+        "payment": {
+          "method": "Visa •••• 8377",
+          "charges": [
+            {
+              "id": "ch_4821_1",
+              "amount": 129,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-24"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Maya wants to return the gooseneck kettle from order #4821 for a refund because it wobbles on her induction hob and she hasn't used it.",
+        "reply": "Hi Maya,\n\nThanks for getting in touch, and I'm sorry the kettle isn't sitting right on your hob.\n\nYes, you can send it back. Your order was delivered on October 28, so you have until November 27 to return it unused and in its original packaging. We'll refund the $129 to your Visa ending 8377. The refund takes 5–10 business days to arrive after we receive the kettle.\n\nBefore we set up the return, could you send us a photo or a short video of the kettle on a flat surface, like a countertop, so we can see the wobble? We want to check whether the base is warped:\n- If the base is warped or faulty, we'll cover everything. That means a free return and your choice of a full refund or a free replacement.\n- If the kettle sits flat on the counter and only wobbles on the hob, it's a standard return. In that case the return shipping is on you, and you'll still get the full $129 back once we receive it.\n\nOnce we see the photo, we'll send you the return instructions.\n\nWarm regards,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "none",
+            "detail": "Wait for the customer's photo or video of the kettle base. If it's defective or warped: send a prepaid return label and do a full $129 refund or a free replacement, whichever she picks. If not: send standard return instructions (customer pays shipping), then refund $129 to Visa •••• 8377 once the kettle is received."
+          }
+        ],
+        "internal_note": "Check whether the stovetop gooseneck (KP-KTL-GN) works on induction. If it doesn't, the wobble may be a compatibility problem rather than a defect. Also, the tracking number 1Z4821KP177499 looks like a UPS number, but the carrier is listed as USPS.",
+        "needs_attention": false
+      }
+    },
+    {
+      "id": "e02",
+      "email": {
+        "id": "e02",
+        "from_name": "Jordan Reyes",
+        "from_email": "jordan.reyes@example.com",
+        "received_at": "2026-11-03T07:02:00Z",
+        "subject": "where is my order",
+        "body": "hey, ordered the electric kettle over a week ago and the tracking hasn't changed in days. is it lost??"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 5580.1578340000015,
+        "lookup_ms": 0.13029199999800767,
+        "draft_ms": 10902.767415999999,
+        "total_ms": 16483.423875000004
+      },
+      "cost_usd": 0.0424592,
+      "created_at": "2026-11-03T14:51:34.904Z",
+      "triage": {
+        "backend": "claude",
+        "category": "shipping",
+        "priority": "normal",
+        "sentiment": "frustrated",
+        "summary": "Customer wants to know where their electric kettle order is, since tracking hasn't updated in days and they fear it's lost.",
+        "confidence": 0.93,
+        "order_id": null
+      },
+      "order": {
+        "id": "4805",
+        "customer": {
+          "name": "Jordan Reyes",
+          "email": "jordan.reyes@example.com"
+        },
+        "placed_at": "2026-10-25",
+        "status": "shipped",
+        "items": [
+          {
+            "sku": "KP-KTL-EL",
+            "name": "Electric Gooseneck Kettle",
+            "qty": 1,
+            "unit_price": 159
+          }
+        ],
+        "subtotal": 159,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "USPS",
+          "tracking": "1Z4805KP050795",
+          "events": [
+            {
+              "date": "2026-10-26",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            },
+            {
+              "date": "2026-10-27",
+              "status": "In transit",
+              "location": "Reno, NV"
+            }
+          ]
+        },
+        "total": 159,
+        "payment": {
+          "method": "Visa •••• 7785",
+          "charges": [
+            {
+              "id": "ch_4805_1",
+              "amount": 159,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-25"
+            }
+          ]
+        }
+      },
+      "order_match": "by_sender",
+      "draft": {
+        "summary": "Customer asks where their electric kettle order is; tracking has been stuck since Oct 27 and they think it may be lost.",
+        "reply": "Hi Jordan,\n\nI'm sorry about the wait. I can see why you're worried.\n\nI found your order #4805 for the Electric Gooseneck Kettle, placed on October 25. It left our Portland workshop on October 26 by USPS standard shipping. The last tracking update was on October 27, when it was in transit in Reno, NV. It hasn't moved since then, which is 7 days now. That's long enough for us to act.\n\nHere's what we're doing:\n- We're opening a trace with USPS to find the parcel.\n- You don't have to wait for the trace. Just tell us which you'd like:\n  1. A replacement kettle, sent free of charge, or\n  2. A full refund of $159 to your Visa ending in 7785. Refunds usually show up within 5–10 business days.\n\nJust reply with your choice and we'll take care of it. Also, if #4805 isn't the order you meant, please send me the right order number.\n\nThanks for your patience, Jordan.\n\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "open_carrier_claim",
+            "detail": "Open a USPS trace for order #4805 (tracking 1Z4805KP050795). Last scan was 2026-10-27, In transit, Reno, NV. No movement for 7 days."
+          },
+          {
+            "type": "none",
+            "detail": "Wait for the customer to choose: a free replacement Electric Gooseneck Kettle (KP-KTL-EL) reshipped to the same address, or a full $159 refund to Visa •••• 7785."
+          }
+        ],
+        "internal_note": "The email had no order number, so I matched it to #4805, the customer's most recent order. The order date and kettle match what they wrote. The tracking number starts with \"1Z\", which is a UPS format, but the carrier is listed as USPS. Please check the carrier and tracking number before opening the trace.",
+        "needs_attention": true
+      }
+    },
+    {
+      "id": "e03",
+      "email": {
+        "id": "e03",
+        "from_name": "Ben Carter",
+        "from_email": "ben.carter@example.org",
+        "received_at": "2026-11-03T06:40:00Z",
+        "subject": "Charged twice for order 4812",
+        "body": "Hello,\n\nMy credit card statement shows two charges of $97 from Kettle & Pine on the same day, but I only placed one order (#4812). Please refund the duplicate as soon as possible.\n\nBen Carter"
+      },
+      "status": "review",
+      "timings": {
+        "triage_ms": 4446.159416000002,
+        "lookup_ms": 0.03499999999985448,
+        "draft_ms": 9577.880667000001,
+        "total_ms": 14024.151458
+      },
+      "cost_usd": 0.036051200000000005,
+      "created_at": "2026-11-03T14:51:34.907Z",
+      "triage": {
+        "backend": "claude",
+        "category": "billing",
+        "priority": "urgent",
+        "sentiment": "neutral",
+        "summary": "Customer was charged twice ($97) for order #4812 and wants the duplicate charge refunded.",
+        "confidence": 0.9,
+        "order_id": "4812"
+      },
+      "order": {
+        "id": "4812",
+        "customer": {
+          "name": "Ben Carter",
+          "email": "ben.carter@example.org"
+        },
+        "placed_at": "2026-10-31",
+        "status": "shipped",
+        "items": [
+          {
+            "sku": "KP-GRD-HND",
+            "name": "Hand Grinder",
+            "qty": 1,
+            "unit_price": 79
+          },
+          {
+            "sku": "KP-BN-COL",
+            "name": "Colombia Huila Beans 250 g",
+            "qty": 1,
+            "unit_price": 18
+          }
+        ],
+        "subtotal": 97,
+        "shipping": {
+          "method": "standard",
+          "fee": 0,
+          "carrier": "USPS",
+          "tracking": "1Z4812KP106228",
+          "events": [
+            {
+              "date": "2026-11-01",
+              "status": "Shipped",
+              "location": "Portland, OR"
+            }
+          ]
+        },
+        "total": 97,
+        "payment": {
+          "method": "Visa •••• 8044",
+          "charges": [
+            {
+              "id": "ch_4812_1",
+              "amount": 97,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-31"
+            },
+            {
+              "id": "ch_4812_2",
+              "amount": 97,
+              "currency": "USD",
+              "status": "captured",
+              "date": "2026-10-31"
+            }
+          ]
+        }
+      },
+      "order_match": "by_id",
+      "draft": {
+        "summary": "Ben was charged $97 twice for order #4812 and wants the duplicate refunded.",
+        "reply": "Hi Ben,\n\nThanks for letting us know, and sorry about this. You're right: our payment system shows two captured charges of $97 on your Visa ending 8044, both dated October 31, for order #4812. The second charge is a duplicate and shouldn't have happened.\n\nWe're refunding that duplicate $97 right away, back to the same Visa card. You'll get a confirmation email from us once the refund has been issued. The first charge covers your order as normal.\n\nYour order (Hand Grinder and Colombia Huila Beans 250 g) shipped from Portland on November 1 by USPS standard shipping, tracking number 1Z4812KP106228. Standard shipping usually takes 3–7 business days.\n\nIf the refund hasn't shown up on your statement in the next few days, just reply to this email and we'll look into it.\n\nBest,\nSam\nKettle & Pine Customer Care",
+        "actions": [
+          {
+            "type": "refund",
+            "detail": "Refund duplicate charge ch_4812_2: $97.00 USD to Visa •••• 8044 (order #4812). Keep ch_4812_1 as the valid payment."
+          }
+        ],
+        "internal_note": "Order data confirms the duplicate: two captured $97 charges on 2026-10-31 (ch_4812_1, ch_4812_2). Refund only ch_4812_2, then send Ben the refund confirmation. The reply gives no bank posting time because the policy doesn't state one.",
+        "needs_attention": false
+      }
+    }
+  ]
+}
